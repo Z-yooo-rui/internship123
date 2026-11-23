@@ -1,0 +1,13 @@
+# 本地预览产物
+preview/
+
+# 项目记录
+.workbuddy/
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统
+.DS_Store
+Thumbs.db

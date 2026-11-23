@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>腾讯 AI / 游戏 岗位</title>
+<meta name="description" content="自动汇总腾讯在招的 AI 与游戏方向实习、应届岗位，每日自动更新。">
+<meta name="theme-color" content="#F5F6F8">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>腾讯 AI / 游戏 岗位</h1>
+    </div>
+    <p class="meta-line" id="meta-line">正在加载岗位数据…</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="toolbar" aria-label="搜索与方向切换">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M12.8 12.8 L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <input id="search" type="search" placeholder="搜索岗位名称，如 大模型、引擎、策划" autocomplete="off" aria-label="搜索岗位名称">
+      <button id="search-clear" class="search-clear" type="button" aria-label="清空搜索" hidden>×</button>
+    </div>
+
+    <div class="tabs" id="tabs" role="tablist" aria-label="方向切换">
+      <button class="tab is-active" data-tab="all" role="tab" aria-selected="true">全部</button>
+      <button class="tab" data-tab="ai" role="tab" aria-selected="false">AI 方向</button>
+      <button class="tab" data-tab="game" role="tab" aria-selected="false">游戏方向</button>
+    </div>
+  </section>
+
+  <section class="filters" id="filters" aria-label="筛选条件"></section>
+
+  <section class="result-bar">
+    <span class="result-count" id="result-count">—</span>
+    <button id="reset" class="reset-btn" type="button">重置筛选</button>
+  </section>
+
+  <section id="list" class="job-list" aria-live="polite"></section>
+
+  <div id="empty" class="empty" hidden>
+    <p class="empty-title">没有匹配的岗位</p>
+    <p class="empty-hint">试试换个关键词，或者重置筛选条件</p>
+    <button id="empty-reset" class="empty-btn" type="button">重置筛选</button>
+  </div>
+
+  <div id="skeleton" class="skeleton-wrap" aria-hidden="true"></div>
+
+  <div id="error" class="empty" hidden>
+    <p class="empty-title">数据加载失败</p>
+    <p class="empty-hint" id="error-hint">请检查网络后刷新页面</p>
+    <button class="empty-btn" type="button" onclick="location.reload()">重新加载</button>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>数据来自腾讯校招官网公开接口，每 2 小时自动更新。岗位信息以官网为准。</p>
+    <p class="footer-dim">本站不收集任何个人信息，不提供投递服务，点击岗位将跳转至腾讯官网。</p>
+  </div>
+</footer>
+
+<script type="module" src="./assets/app.js"></script>
+</body>
+</html>
