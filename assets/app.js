@@ -1,4 +1,5 @@
 const DATA_URL = './data/jobs.json';
+const FAV_KEY = 'tencent-roles:favs';
 const CITY_PREVIEW_LIMIT = 6;
 const SEARCH_DEBOUNCE_MS = 120;
 const STALE_HOURS = 24;
@@ -9,12 +10,33 @@ const state = {
   type: 'intern',
   cities: new Set(),
   bgs: new Set(),
+  favOnly: false,
 };
 
 let allJobs = [];
 let meta = {};
 let cityExpanded = false;
 let searchTimer = null;
+
+function loadFavs() {
+  try {
+    const raw = localStorage.getItem(FAV_KEY);
+    const arr = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveFavs() {
+  try {
+    localStorage.setItem(FAV_KEY, JSON.stringify([...favs]));
+  } catch {
+    /* 隐私模式下写入会失败，忽略即可 */
+  }
+}
+
+let favs = loadFavs();
 
 const el = {
   topbarTime: document.getElementById('topbar-time'),
@@ -33,6 +55,8 @@ const el = {
   errorHint: document.getElementById('error-hint'),
   skeleton: document.getElementById('skeleton'),
   count: document.getElementById('result-count'),
+  distCities: document.getElementById('dist-cities'),
+  distBgs: document.getElementById('dist-bgs'),
   search: document.getElementById('search'),
   searchClear: document.getElementById('search-clear'),
   searchKbd: document.getElementById('search-kbd'),
@@ -125,6 +149,7 @@ async function load() {
 
     el.skeleton.hidden = true;
     renderMeta();
+    renderDist();
     renderFilters();
     render();
   } catch (err) {
@@ -155,6 +180,41 @@ function isStale(iso) {
   const t = Date.parse(iso);
   if (Number.isNaN(t)) return false;
   return Date.now() - t > STALE_HOURS * 3600 * 1000;
+}
+
+/* ---------- 分布图 ---------- */
+
+function barRow(item, max, isTop) {
+  const row = document.createElement('div');
+  row.className = 'bar-row';
+  row.title = item.label + '：' + item.count + ' 个岗位';
+
+  row.appendChild(span(item.label, 'bar-name'));
+
+  const track = document.createElement('div');
+  track.className = 'bar-track';
+  const fill = document.createElement('div');
+  fill.className = 'bar-fill' + (isTop ? ' is-top' : '');
+  fill.style.width = Math.max(5, Math.round((item.count / max) * 100)) + '%';
+  track.appendChild(fill);
+  row.appendChild(track);
+
+  row.appendChild(span(String(item.count), 'bar-num'));
+  return row;
+}
+
+function renderDist() {
+  const cities = countMap(allJobs, (j) => j.cities).slice(0, 5);
+  const bgs = countMap(allJobs, (j) => j.bgs).slice(0, 5);
+
+  if (cities.length) {
+    el.distCities.replaceChildren(
+      ...cities.map((it, i) => barRow(it, cities[0].count, i === 0))
+    );
+  }
+  if (bgs.length) {
+    el.distBgs.replaceChildren(...bgs.map((it, i) => barRow(it, bgs[0].count, i === 0)));
+  }
 }
 
 /* ---------- 筛选 ---------- */
@@ -220,6 +280,20 @@ function renderFilters() {
     })
   );
 
+  const rows = [makeRow('类型', typeNodes)];
+
+  if (favs.size > 0) {
+    rows.push(
+      makeRow('收藏', [
+        chip('只看收藏', favs.size, state.favOnly, () => {
+          state.favOnly = !state.favOnly;
+          renderFilters();
+          render();
+        }),
+      ])
+    );
+  }
+
   const cityItems = countMap(allJobs, (j) => j.cities);
   const cityShown = cityExpanded ? cityItems : cityItems.slice(0, CITY_PREVIEW_LIMIT);
   const cityNodes = cityShown.map((it) =>
@@ -251,7 +325,7 @@ function renderFilters() {
   );
 
   el.filters.replaceChildren(
-    makeRow('类型', typeNodes),
+    ...rows,
     makeRow('城市', cityNodes),
     makeRow('事业群', bgNodes)
   );
@@ -260,7 +334,12 @@ function renderFilters() {
 }
 
 function activeFilterCount() {
-  return state.cities.size + state.bgs.size + (state.type !== 'intern' ? 1 : 0);
+  return (
+    state.cities.size +
+    state.bgs.size +
+    (state.type !== 'intern' ? 1 : 0) +
+    (state.favOnly ? 1 : 0)
+  );
 }
 
 function updateBadge() {
@@ -274,6 +353,7 @@ function updateBadge() {
 function filteredJobs() {
   const q = state.q.trim().toLowerCase();
   return allJobs.filter((job) => {
+    if (state.favOnly && !favs.has(job.id)) return false;
     if (state.tab !== 'all' && !job.tags.includes(state.tab)) return false;
     if (state.type !== 'all' && job.type !== state.type) return false;
     if (state.cities.size && !job.cities.some((c) => state.cities.has(c))) return false;
@@ -303,7 +383,48 @@ function createCard(job) {
   h.className = 'job-title';
   h.textContent = job.title;
 
+  const isFav = favs.has(job.id);
+  const favBtn = document.createElement('button');
+  favBtn.type = 'button';
+  favBtn.className = 'fav' + (isFav ? ' is-on' : '');
+  favBtn.setAttribute('aria-label', isFav ? '取消收藏' : '收藏');
+  favBtn.setAttribute('aria-pressed', String(isFav));
+  const star = document.createElementNS(ns, 'svg');
+  star.setAttribute('viewBox', '0 0 16 16');
+  const starPath = document.createElementNS(ns, 'path');
+  starPath.setAttribute(
+    'd',
+    'M8 1.8 L9.85 5.65 L14.1 6.27 L11.05 9.25 L11.77 13.5 L8 11.5 L4.23 13.5 L4.95 9.25 L1.9 6.27 L6.15 5.65 Z'
+  );
+  starPath.setAttribute('fill', isFav ? 'currentColor' : 'none');
+  starPath.setAttribute('stroke', 'currentColor');
+  starPath.setAttribute('stroke-width', '1.3');
+  starPath.setAttribute('stroke-linejoin', 'round');
+  star.appendChild(starPath);
+  favBtn.appendChild(star);
+
+  favBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const on = favs.has(job.id);
+    if (on) favs.delete(job.id);
+    else favs.add(job.id);
+    saveFavs();
+
+    if (state.favOnly) {
+      renderFilters();
+      render();
+    } else {
+      favBtn.classList.toggle('is-on', !on);
+      favBtn.setAttribute('aria-pressed', String(!on));
+      favBtn.setAttribute('aria-label', !on ? '取消收藏' : '收藏');
+      starPath.setAttribute('fill', !on ? 'currentColor' : 'none');
+      renderFilters();
+    }
+  });
+
   head.appendChild(h);
+  head.appendChild(favBtn);
   head.appendChild(svgIcon('M4 12 L12 4 M6 4 L12 4 L12 10', 'job-go'));
 
   const foot = document.createElement('div');
@@ -381,6 +502,7 @@ function resetAll() {
   state.type = 'intern';
   state.cities.clear();
   state.bgs.clear();
+  state.favOnly = false;
   el.search.value = '';
   el.searchClear.hidden = true;
   for (const t of el.tabs.querySelectorAll('.tab')) {
@@ -430,6 +552,7 @@ el.filterClear.addEventListener('click', () => {
   state.cities.clear();
   state.bgs.clear();
   state.type = 'intern';
+  state.favOnly = false;
   renderFilters();
   render();
 });

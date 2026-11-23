@@ -27,27 +27,46 @@
 
 <section class="hero">
   <div class="shell">
-    <p class="hero-eyebrow">腾讯校招 · 实习与应届</p>
-    <h1 class="hero-title">AI 与游戏方向的岗位<br>一页看完</h1>
-    <p class="hero-sub">自动抓取腾讯招聘官网在招职位，按方向整理。不用再翻十几个页面找「这个岗是不是做 AI」。</p>
+    <div class="hero-grid">
+      <div class="hero-main">
+        <p class="hero-eyebrow">腾讯校招 · 实习与应届</p>
+        <h1 class="hero-title">AI 与游戏方向的岗位<br>一页看完</h1>
+        <p class="hero-sub">自动抓取腾讯招聘官网在招职位，按方向整理。不用再翻十几个页面找「这个岗是不是做 AI」。</p>
 
-    <div class="stats" id="stats">
-      <div class="stat">
-        <span class="stat-num" id="stat-total">—</span>
-        <span class="stat-label">在招岗位</span>
+        <div class="stats" id="stats">
+          <div class="stat">
+            <span class="stat-num" id="stat-total">—</span>
+            <span class="stat-label">在招岗位</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" id="stat-ai">—</span>
+            <span class="stat-label">AI 方向</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" id="stat-game">—</span>
+            <span class="stat-label">游戏方向</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" id="stat-intern">—</span>
+            <span class="stat-label">实习岗位</span>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat-num" id="stat-ai">—</span>
-        <span class="stat-label">AI 方向</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" id="stat-game">—</span>
-        <span class="stat-label">游戏方向</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" id="stat-intern">—</span>
-        <span class="stat-label">实习岗位</span>
-      </div>
+
+      <aside class="dist-card" aria-label="岗位分布">
+        <div class="dist-head">
+          <h2 class="dist-title">岗位分布</h2>
+          <span class="dist-note">全站在招</span>
+        </div>
+        <div class="dist-block">
+          <p class="dist-label">城市</p>
+          <div class="dist-bars" id="dist-cities"></div>
+        </div>
+        <div class="dist-block">
+          <p class="dist-label">事业群</p>
+          <div class="dist-bars" id="dist-bgs"></div>
+        </div>
+      </aside>
     </div>
   </div>
 </section>

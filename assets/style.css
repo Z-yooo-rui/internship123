@@ -24,7 +24,7 @@
     "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
-  --shell: 1080px;
+  --shell: 1160px;
 }
 
 * { box-sizing: border-box; }
@@ -145,11 +145,20 @@ a { color: inherit; text-decoration: none; }
 /* ============ Hero ============ */
 
 .hero {
-  padding: 56px 0 40px;
+  padding: 56px 0 34px;
   background:
     radial-gradient(900px 320px at 12% -20%, rgba(26, 92, 255, 0.055), transparent 70%),
     radial-gradient(700px 280px at 88% -30%, rgba(124, 92, 255, 0.05), transparent 70%);
 }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 56px;
+  align-items: start;
+}
+
+.hero-main { min-width: 0; }
 
 .hero-eyebrow {
   font-size: 11.5px;
@@ -207,6 +216,96 @@ a { color: inherit; text-decoration: none; }
 .stat-label {
   font-size: 12px;
   color: var(--text-3);
+}
+
+/* ---------- 分布卡片 ---------- */
+
+.dist-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.dist-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.dist-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.dist-note {
+  font-size: 11px;
+  color: var(--text-4);
+  font-variant-numeric: tabular-nums;
+}
+
+.dist-block + .dist-block {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.dist-label {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 10px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) 34px;
+  gap: 9px;
+  align-items: center;
+  height: 21px;
+}
+
+.bar-name {
+  font-size: 11.5px;
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  height: 6px;
+  background: var(--surface-sunken);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--text-4);
+  border-radius: 3px;
+  animation: grow 0.6s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+  transform-origin: left;
+}
+
+.bar-fill.is-top { background: var(--text); }
+
+@keyframes grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.bar-num {
+  font-size: 11px;
+  color: var(--text-3);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ============ 控制栏 ============ */
@@ -563,8 +662,33 @@ a { color: inherit; text-decoration: none; }
 .job-head {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
 }
+
+.fav {
+  width: 24px;
+  height: 24px;
+  margin-top: -1px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-4);
+  flex-shrink: 0;
+  transition: color 0.14s, background 0.14s, transform 0.14s;
+}
+
+.fav svg { width: 14px; height: 14px; display: block; }
+
+.fav:hover {
+  color: #d9a406;
+  background: #fdf6dd;
+  transform: scale(1.08);
+}
+
+.fav.is-on { color: #e0aa06; }
+
+.fav.is-on svg path { fill: currentColor; }
 
 .job-title {
   flex: 1;
@@ -773,6 +897,15 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .dist-card {
+    max-width: 460px;
+  }
+
   .hero { padding: 40px 0 32px; }
 
   .footer-inner {
@@ -834,7 +967,9 @@ a { color: inherit; text-decoration: none; }
 
   .job-title { font-size: 14px; }
 
-  .job-go { opacity: 0.45; transform: none; }
+  .job-go { display: none; }
+
+  .dist-card { display: none; }
 
   .main { padding-top: 16px; padding-bottom: 44px; }
 }
