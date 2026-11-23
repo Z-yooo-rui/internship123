@@ -1,9 +1,8 @@
 const DATA_URL = './data/jobs.json';
-const CITY_PREVIEW_LIMIT = 8;
+const CITY_PREVIEW_LIMIT = 6;
 const SEARCH_DEBOUNCE_MS = 120;
 const STALE_HOURS = 24;
 
-const STATE_TYPE_LABEL = { intern: '实习', campus: '应届', other: '其他' };
 const state = {
   q: '',
   tab: 'all',
@@ -18,8 +17,16 @@ let cityExpanded = false;
 let searchTimer = null;
 
 const el = {
-  meta: document.getElementById('meta-line'),
+  topbarTime: document.getElementById('topbar-time'),
+  statTotal: document.getElementById('stat-total'),
+  statAi: document.getElementById('stat-ai'),
+  statGame: document.getElementById('stat-game'),
+  statIntern: document.getElementById('stat-intern'),
   filters: document.getElementById('filters'),
+  filterPanel: document.getElementById('filter-panel'),
+  filterToggle: document.getElementById('filter-toggle'),
+  filterBadge: document.getElementById('filter-badge'),
+  filterClear: document.getElementById('filter-clear'),
   list: document.getElementById('list'),
   empty: document.getElementById('empty'),
   error: document.getElementById('error'),
@@ -28,6 +35,7 @@ const el = {
   count: document.getElementById('result-count'),
   search: document.getElementById('search'),
   searchClear: document.getElementById('search-clear'),
+  searchKbd: document.getElementById('search-kbd'),
   tabs: document.getElementById('tabs'),
   reset: document.getElementById('reset'),
   emptyReset: document.getElementById('empty-reset'),
@@ -58,19 +66,19 @@ function span(text, cls) {
   return s;
 }
 
-function sep() {
-  const s = document.createElement('span');
-  s.className = 'sep';
-  return s;
+function dotSep() {
+  const d = document.createElement('span');
+  d.className = 'dot-sep';
+  return d;
 }
 
 /* ---------- 加载 ---------- */
 
 function renderSkeleton() {
   const frag = document.createDocumentFragment();
-  for (let i = 0; i < 6; i += 1) {
+  for (let i = 0; i < 8; i += 1) {
     const card = document.createElement('div');
-    card.className = 'sk-card';
+    card.className = 'sk';
     frag.appendChild(card);
   }
   el.skeleton.replaceChildren(frag);
@@ -82,10 +90,27 @@ function showError(err) {
   el.list.hidden = true;
   if (location.protocol === 'file:') {
     el.errorHint.textContent =
-      '检测到你是直接双击打开的 HTML 文件，浏览器会拦截本地数据请求。请用本地服务器访问，例如在项目目录执行 python -m http.server 8000';
+      '检测到你是直接双击打开的 HTML 文件，浏览器会拦截本地数据请求。请在项目目录执行 python -m http.server 8000，然后访问 127.0.0.1:8000';
   } else {
-    el.errorHint.textContent = '请检查网络后刷新页面（' + (err && err.message ? err.message : '未知错误') + '）';
+    el.errorHint.textContent =
+      '请检查网络后刷新页面（' + (err && err.message ? err.message : '未知错误') + '）';
   }
+}
+
+function countUp(node, target, duration = 700) {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || target < 10) {
+    node.textContent = String(target);
+    return;
+  }
+  const start = performance.now();
+  const step = (now) => {
+    const p = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - p, 3);
+    node.textContent = String(Math.round(target * eased));
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
 }
 
 async function load() {
@@ -107,7 +132,7 @@ async function load() {
   }
 }
 
-/* ---------- 头部信息 ---------- */
+/* ---------- 头部 ---------- */
 
 function renderMeta() {
   const total = meta.kept_count ?? allJobs.length;
@@ -116,18 +141,13 @@ function renderMeta() {
   const game = meta.game_count ?? 0;
   const time = meta.fetched_at_display || '未知时间';
 
-  el.meta.replaceChildren();
-  el.meta.appendChild(document.createTextNode('共 '));
-  el.meta.appendChild(span(String(total), 'meta-strong'));
-  el.meta.appendChild(document.createTextNode(' 个岗位 · 实习 ' + intern + ' 个 · AI ' + ai + ' · 游戏 ' + game + ' · 更新于 ' + time));
+  countUp(el.statTotal, total);
+  countUp(el.statAi, ai);
+  countUp(el.statGame, game);
+  countUp(el.statIntern, intern);
 
   const stale = isStale(meta.fetched_at);
-  if (stale) {
-    const warn = document.createElement('div');
-    warn.className = 'meta-warn';
-    warn.textContent = '数据已超过 ' + STALE_HOURS + ' 小时未更新，可能不是最新，请以腾讯官网为准';
-    el.meta.appendChild(warn);
-  }
+  el.topbarTime.textContent = stale ? '更新于 ' + time + '（可能不是最新）' : '更新于 ' + time;
 }
 
 function isStale(iso) {
@@ -137,28 +157,26 @@ function isStale(iso) {
   return Date.now() - t > STALE_HOURS * 3600 * 1000;
 }
 
-/* ---------- 筛选器 ---------- */
+/* ---------- 筛选 ---------- */
 
 function countMap(items, pick) {
   const map = new Map();
   for (const job of items) {
-    for (const v of pick(job)) {
-      map.set(v, (map.get(v) || 0) + 1);
-    }
+    for (const v of pick(job)) map.set(v, (map.get(v) || 0) + 1);
   }
   return [...map.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'zh-Hans-CN'))
     .map(([id, count]) => ({ id, label: id, count }));
 }
 
-function chip(label, count, on, onClick, extraClass) {
+function chip(label, count, on, onClick) {
   const b = document.createElement('button');
   b.type = 'button';
-  b.className = 'chip' + (on ? ' is-on' : '') + (extraClass ? ' ' + extraClass : '');
+  b.className = 'chip' + (on ? ' is-on' : '');
   b.textContent = label;
   if (count != null) {
     const c = document.createElement('span');
-    c.className = 'chip-count';
+    c.className = 'chip-n';
     c.textContent = count;
     b.appendChild(c);
   }
@@ -166,18 +184,26 @@ function chip(label, count, on, onClick, extraClass) {
   return b;
 }
 
-function makeGroup(label, nodes) {
-  const group = document.createElement('div');
-  group.className = 'filter-group';
+function makeRow(label, nodes) {
+  const row = document.createElement('div');
+  row.className = 'filter-row';
+
   const lab = document.createElement('div');
   lab.className = 'filter-label';
   lab.textContent = label;
+
   const chips = document.createElement('div');
   chips.className = 'chips';
   for (const n of nodes) chips.appendChild(n);
-  group.appendChild(lab);
-  group.appendChild(chips);
-  return group;
+
+  row.appendChild(lab);
+  row.appendChild(chips);
+  return row;
+}
+
+function toggleSet(set, value) {
+  if (set.has(value)) set.delete(value);
+  else set.add(value);
 }
 
 function renderFilters() {
@@ -225,15 +251,22 @@ function renderFilters() {
   );
 
   el.filters.replaceChildren(
-    makeGroup('类型', typeNodes),
-    makeGroup('城市', cityNodes),
-    makeGroup('事业群', bgNodes)
+    makeRow('类型', typeNodes),
+    makeRow('城市', cityNodes),
+    makeRow('事业群', bgNodes)
   );
+
+  updateBadge();
 }
 
-function toggleSet(set, value) {
-  if (set.has(value)) set.delete(value);
-  else set.add(value);
+function activeFilterCount() {
+  return state.cities.size + state.bgs.size + (state.type !== 'intern' ? 1 : 0);
+}
+
+function updateBadge() {
+  const n = activeFilterCount();
+  el.filterBadge.hidden = n === 0;
+  el.filterBadge.textContent = String(n);
 }
 
 /* ---------- 列表 ---------- */
@@ -250,59 +283,77 @@ function filteredJobs() {
   });
 }
 
+function tagKey(job) {
+  if (job.tags.length === 2) return 'both';
+  return job.tags[0] || 'none';
+}
+
 function createCard(job) {
   const a = document.createElement('a');
   a.className = 'job';
   a.href = job.url;
   a.target = '_blank';
   a.rel = 'noopener noreferrer';
+  a.dataset.tags = tagKey(job);
 
-  const top = document.createElement('div');
-  top.className = 'job-top';
+  const head = document.createElement('div');
+  head.className = 'job-head';
 
   const h = document.createElement('h3');
   h.className = 'job-title';
   h.textContent = job.title;
-  top.appendChild(h);
-  top.appendChild(svgIcon('M4 12 L12 4 M6 4 L12 4 L12 10', 'job-arrow'));
 
-  const metaRow = document.createElement('div');
-  metaRow.className = 'job-meta';
+  head.appendChild(h);
+  head.appendChild(svgIcon('M4 12 L12 4 M6 4 L12 4 L12 10', 'job-go'));
 
-  if (job.tags.includes('ai')) {
-    const t = span('AI', 'tag tag-ai');
-    metaRow.appendChild(t);
-  }
-  if (job.tags.includes('game')) {
-    metaRow.appendChild(span('游戏', 'tag tag-game'));
-  }
-  metaRow.appendChild(span(job.project, 'tag tag-type'));
+  const foot = document.createElement('div');
+  foot.className = 'job-foot';
 
+  const tags = document.createElement('div');
+  tags.className = 'job-tags';
+
+  if (job.tags.includes('ai')) tags.appendChild(span('AI', 'tag tag-ai'));
+  if (job.tags.includes('game')) tags.appendChild(span('游戏', 'tag tag-game'));
+
+  const metaLine = document.createElement('span');
+  metaLine.className = 'job-meta';
   if (job.bgs.length) {
-    metaRow.appendChild(sep());
-    const bgText = job.bgs.slice(0, 2).join(' / ') + (job.bgs.length > 2 ? ' +' + (job.bgs.length - 2) : '');
-    metaRow.appendChild(span(bgText, 'job-bg'));
+    metaLine.appendChild(span(job.bgs[0], 'bg'));
+    if (job.bgs.length > 1) metaLine.appendChild(span('+' + (job.bgs.length - 1)));
   }
-
   if (job.cities.length) {
-    metaRow.appendChild(sep());
-    const cityText =
-      job.cities.slice(0, 2).join(' / ') + (job.cities.length > 2 ? ' +' + (job.cities.length - 2) : '');
-    metaRow.appendChild(span(cityText));
+    if (job.bgs.length) metaLine.appendChild(dotSep());
+    metaLine.appendChild(span(job.cities[0]));
+    if (job.cities.length > 1) metaLine.appendChild(span('+' + (job.cities.length - 1)));
   }
+  const fullMeta = [];
+  if (job.bgs.length) fullMeta.push('事业群：' + job.bgs.join(' / '));
+  if (job.cities.length) fullMeta.push('城市：' + job.cities.join(' / '));
+  if (fullMeta.length) metaLine.title = fullMeta.join('　');
+  tags.appendChild(metaLine);
 
-  a.appendChild(top);
-  a.appendChild(metaRow);
+  foot.appendChild(tags);
+
+  const proj = span(job.project, 'job-project');
+  proj.title = job.project;
+  foot.appendChild(proj);
+
+  a.appendChild(head);
+  a.appendChild(foot);
   return a;
 }
 
 function render() {
   const jobs = filteredJobs();
 
-  el.count.replaceChildren();
-  el.count.appendChild(document.createTextNode('找到 '));
-  el.count.appendChild(span(String(jobs.length), 'meta-strong'));
-  el.count.appendChild(document.createTextNode(' 个岗位'));
+  const typeWord = state.type === 'intern' ? '实习' : state.type === 'campus' ? '应届' : '';
+  const strong = document.createElement('strong');
+  strong.textContent = String(jobs.length);
+  el.count.replaceChildren(
+    document.createTextNode('找到 '),
+    strong,
+    document.createTextNode(' 个' + typeWord + '岗位')
+  );
 
   if (!jobs.length) {
     el.list.replaceChildren();
@@ -317,7 +368,12 @@ function render() {
   el.list.replaceChildren(frag);
 }
 
-/* ---------- 交互绑定 ---------- */
+/* ---------- 交互 ---------- */
+
+function setPanel(open) {
+  el.filterPanel.hidden = !open;
+  el.filterToggle.setAttribute('aria-expanded', String(open));
+}
 
 function resetAll() {
   state.q = '';
@@ -366,7 +422,33 @@ el.tabs.addEventListener('click', (e) => {
   render();
 });
 
+el.filterToggle.addEventListener('click', () => {
+  setPanel(el.filterPanel.hidden);
+});
+
+el.filterClear.addEventListener('click', () => {
+  state.cities.clear();
+  state.bgs.clear();
+  state.type = 'intern';
+  renderFilters();
+  render();
+});
+
 el.reset.addEventListener('click', resetAll);
 el.emptyReset.addEventListener('click', resetAll);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement !== el.search && !e.metaKey && !e.ctrlKey) {
+    e.preventDefault();
+    el.search.focus();
+  }
+  if (e.key === 'Escape' && document.activeElement === el.search) {
+    el.search.value = '';
+    el.searchClear.hidden = true;
+    state.q = '';
+    el.search.blur();
+    render();
+  }
+});
 
 load();
