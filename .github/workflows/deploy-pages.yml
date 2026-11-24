@@ -16,12 +16,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  # 构建与部署拆成两个 job：job 之间有调度开销，
+  # 正好等过 artifact 索引的最终一致性延迟
+  # （实测同 job 内上传成功后仅隔 0.46 秒查询，返回 0 个 artifact）
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: 检出仓库
         uses: actions/checkout@v7
@@ -41,6 +40,13 @@ jobs:
           path: '_site'
           include-hidden-files: true
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: 发布
         id: deployment
         uses: actions/deploy-pages@v5
