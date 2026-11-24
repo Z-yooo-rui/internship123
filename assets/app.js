@@ -1,22 +1,69 @@
 const DATA_URL = './data/jobs.json';
 const FAV_KEY = 'tencent-roles:favs';
-const CITY_PREVIEW_LIMIT = 6;
 const SEARCH_DEBOUNCE_MS = 120;
 const STALE_HOURS = 24;
+const FAMILY_ORDER = ['AI 研究', '技术', '产品', '设计', '市场', '职能'];
 
 const state = {
   q: '',
-  tab: 'all',
-  type: 'intern',
+  type: 'all',
+  families: new Set(),
+  subFamilies: new Set(),
   cities: new Set(),
   bgs: new Set(),
+  projects: new Set(),
   favOnly: false,
 };
 
 let allJobs = [];
 let meta = {};
-let cityExpanded = false;
+let favs = loadFavs();
 let searchTimer = null;
+let cityExpanded = false;
+
+const el = {
+  time: document.getElementById('topbar-time'),
+  statTotal: document.getElementById('stat-total'),
+  statAi: document.getElementById('stat-ai'),
+  statTech: document.getElementById('stat-tech'),
+  statIntern: document.getElementById('stat-intern'),
+  groups: document.getElementById('filter-groups'),
+  sidebar: document.getElementById('sidebar'),
+  mask: document.getElementById('sidebar-mask'),
+  sideClose: document.getElementById('sidebar-close'),
+  filterOpen: document.getElementById('filter-open'),
+  filterCount: document.getElementById('filter-count'),
+  filterReset: document.getElementById('filter-reset'),
+  activeBar: document.getElementById('active-bar'),
+  list: document.getElementById('list'),
+  empty: document.getElementById('empty'),
+  error: document.getElementById('error'),
+  errorHint: document.getElementById('error-hint'),
+  skeleton: document.getElementById('skeleton'),
+  count: document.getElementById('result-count'),
+  search: document.getElementById('search'),
+  searchClear: document.getElementById('search-clear'),
+  seg: document.getElementById('type-seg'),
+  reset: document.getElementById('reset'),
+  emptyReset: document.getElementById('empty-reset'),
+};
+
+const ns = 'http://www.w3.org/2000/svg';
+
+/* ---------- 工具 ---------- */
+
+function span(text, cls) {
+  const s = document.createElement('span');
+  if (cls) s.className = cls;
+  s.textContent = text;
+  return s;
+}
+
+function dotSep() {
+  const d = document.createElement('span');
+  d.className = 'dot-sep';
+  return d;
+}
 
 function loadFavs() {
   try {
@@ -32,68 +79,34 @@ function saveFavs() {
   try {
     localStorage.setItem(FAV_KEY, JSON.stringify([...favs]));
   } catch {
-    /* 隐私模式下写入会失败，忽略即可 */
+    /* 隐私模式忽略 */
   }
 }
 
-let favs = loadFavs();
-
-const el = {
-  topbarTime: document.getElementById('topbar-time'),
-  statTotal: document.getElementById('stat-total'),
-  statAi: document.getElementById('stat-ai'),
-  statGame: document.getElementById('stat-game'),
-  statIntern: document.getElementById('stat-intern'),
-  filters: document.getElementById('filters'),
-  filterPanel: document.getElementById('filter-panel'),
-  filterToggle: document.getElementById('filter-toggle'),
-  filterBadge: document.getElementById('filter-badge'),
-  filterClear: document.getElementById('filter-clear'),
-  list: document.getElementById('list'),
-  empty: document.getElementById('empty'),
-  error: document.getElementById('error'),
-  errorHint: document.getElementById('error-hint'),
-  skeleton: document.getElementById('skeleton'),
-  count: document.getElementById('result-count'),
-  distCities: document.getElementById('dist-cities'),
-  distBgs: document.getElementById('dist-bgs'),
-  search: document.getElementById('search'),
-  searchClear: document.getElementById('search-clear'),
-  searchKbd: document.getElementById('search-kbd'),
-  tabs: document.getElementById('tabs'),
-  reset: document.getElementById('reset'),
-  emptyReset: document.getElementById('empty-reset'),
-};
-
-const ns = 'http://www.w3.org/2000/svg';
-
-function svgIcon(pathD, cls) {
-  const svg = document.createElementNS(ns, 'svg');
-  svg.setAttribute('viewBox', '0 0 16 16');
-  svg.setAttribute('class', cls);
-  svg.setAttribute('aria-hidden', 'true');
-  const p = document.createElementNS(ns, 'path');
-  p.setAttribute('d', pathD);
-  p.setAttribute('fill', 'none');
-  p.setAttribute('stroke', 'currentColor');
-  p.setAttribute('stroke-width', '1.6');
-  p.setAttribute('stroke-linecap', 'round');
-  p.setAttribute('stroke-linejoin', 'round');
-  svg.appendChild(p);
-  return svg;
+function countUp(node, target, duration = 650) {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || target < 10) {
+    node.textContent = String(target);
+    return;
+  }
+  const start = performance.now();
+  const step = (now) => {
+    const p = Math.min(1, (now - start) / duration);
+    node.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
 }
 
-function span(text, cls) {
-  const s = document.createElement('span');
-  if (cls) s.className = cls;
-  s.textContent = text;
-  return s;
-}
-
-function dotSep() {
-  const d = document.createElement('span');
-  d.className = 'dot-sep';
-  return d;
+function countMap(items, pick) {
+  const map = new Map();
+  for (const job of items) {
+    for (const v of pick(job)) {
+      if (!v) continue;
+      map.set(v, (map.get(v) || 0) + 1);
+    }
+  }
+  return [...map.entries()].map(([id, count]) => ({ id, count }));
 }
 
 /* ---------- 加载 ---------- */
@@ -114,27 +127,11 @@ function showError(err) {
   el.list.hidden = true;
   if (location.protocol === 'file:') {
     el.errorHint.textContent =
-      '检测到你是直接双击打开的 HTML 文件，浏览器会拦截本地数据请求。请在项目目录执行 python -m http.server 8000，然后访问 127.0.0.1:8000';
+      '检测到你是直接双击打开 HTML，浏览器会拦截本地数据请求。请在项目目录执行 python -m http.server 8000 后访问 127.0.0.1:8000';
   } else {
     el.errorHint.textContent =
       '请检查网络后刷新页面（' + (err && err.message ? err.message : '未知错误') + '）';
   }
-}
-
-function countUp(node, target, duration = 700) {
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || target < 10) {
-    node.textContent = String(target);
-    return;
-  }
-  const start = performance.now();
-  const step = (now) => {
-    const p = Math.min(1, (now - start) / duration);
-    const eased = 1 - Math.pow(1 - p, 3);
-    node.textContent = String(Math.round(target * eased));
-    if (p < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
 }
 
 async function load() {
@@ -149,7 +146,6 @@ async function load() {
 
     el.skeleton.hidden = true;
     renderMeta();
-    renderDist();
     renderFilters();
     render();
   } catch (err) {
@@ -160,19 +156,14 @@ async function load() {
 /* ---------- 头部 ---------- */
 
 function renderMeta() {
-  const total = meta.kept_count ?? allJobs.length;
-  const intern = meta.intern_count ?? 0;
-  const ai = meta.ai_count ?? 0;
-  const game = meta.game_count ?? 0;
-  const time = meta.fetched_at_display || '未知时间';
-
-  countUp(el.statTotal, total);
-  countUp(el.statAi, ai);
-  countUp(el.statGame, game);
-  countUp(el.statIntern, intern);
+  const time = meta.fetched_at_display || '未知';
+  countUp(el.statTotal, meta.kept_count ?? allJobs.length);
+  countUp(el.statAi, meta.families?.find((f) => f.name === 'AI 研究')?.count ?? 0);
+  countUp(el.statTech, meta.families?.find((f) => f.name === '技术')?.count ?? 0);
+  countUp(el.statIntern, meta.intern_count ?? 0);
 
   const stale = isStale(meta.fetched_at);
-  el.topbarTime.textContent = stale ? '更新于 ' + time + '（可能不是最新）' : '更新于 ' + time;
+  el.time.textContent = stale ? '更新于 ' + time + '（可能不是最新）' : '更新于 ' + time;
 }
 
 function isStale(iso) {
@@ -182,170 +173,224 @@ function isStale(iso) {
   return Date.now() - t > STALE_HOURS * 3600 * 1000;
 }
 
-/* ---------- 分布图 ---------- */
+/* ---------- 筛选器 ---------- */
 
-function barRow(item, max, isTop) {
-  const row = document.createElement('div');
-  row.className = 'bar-row';
-  row.title = item.label + '：' + item.count + ' 个岗位';
+function makeGroup(title, note, items, selected, onToggle, opts = {}) {
+  const group = document.createElement('div');
+  group.className = 'fgroup';
 
-  row.appendChild(span(item.label, 'bar-name'));
+  const head = document.createElement('div');
+  head.className = 'fgroup-title';
+  head.appendChild(span(title));
+  if (note) head.appendChild(span(note, 'fgroup-note'));
+  group.appendChild(head);
 
-  const track = document.createElement('div');
-  track.className = 'bar-track';
-  const fill = document.createElement('div');
-  fill.className = 'bar-fill' + (isTop ? ' is-top' : '');
-  fill.style.width = Math.max(5, Math.round((item.count / max) * 100)) + '%';
-  track.appendChild(fill);
-  row.appendChild(track);
-
-  row.appendChild(span(String(item.count), 'bar-num'));
-  return row;
-}
-
-function renderDist() {
-  const cities = countMap(allJobs, (j) => j.cities).slice(0, 5);
-  const bgs = countMap(allJobs, (j) => j.bgs).slice(0, 5);
-
-  if (cities.length) {
-    el.distCities.replaceChildren(
-      ...cities.map((it, i) => barRow(it, cities[0].count, i === 0))
-    );
+  if (!items.length) {
+    const empty = document.createElement('p');
+    empty.className = 'fgroup-empty';
+    empty.textContent = opts.emptyText || '暂无可选项';
+    group.appendChild(empty);
+    return group;
   }
-  if (bgs.length) {
-    el.distBgs.replaceChildren(...bgs.map((it, i) => barRow(it, bgs[0].count, i === 0)));
+
+  for (const item of items) {
+    const label = document.createElement('label');
+    label.className = 'fopt' + (opts.sub ? ' is-sub' : '');
+
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = selected.has(item.id);
+    cb.addEventListener('change', () => onToggle(item.id));
+
+    label.appendChild(cb);
+    label.appendChild(span(item.id, 'fopt-name'));
+    label.appendChild(span(String(item.count), 'fopt-n'));
+    group.appendChild(label);
   }
+  return group;
 }
 
-/* ---------- 筛选 ---------- */
-
-function countMap(items, pick) {
-  const map = new Map();
-  for (const job of items) {
-    for (const v of pick(job)) map.set(v, (map.get(v) || 0) + 1);
-  }
-  return [...map.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'zh-Hans-CN'))
-    .map(([id, count]) => ({ id, label: id, count }));
-}
-
-function chip(label, count, on, onClick) {
-  const b = document.createElement('button');
-  b.type = 'button';
-  b.className = 'chip' + (on ? ' is-on' : '');
-  b.textContent = label;
-  if (count != null) {
-    const c = document.createElement('span');
-    c.className = 'chip-n';
-    c.textContent = count;
-    b.appendChild(c);
-  }
-  b.addEventListener('click', onClick);
-  return b;
-}
-
-function makeRow(label, nodes) {
-  const row = document.createElement('div');
-  row.className = 'filter-row';
-
-  const lab = document.createElement('div');
-  lab.className = 'filter-label';
-  lab.textContent = label;
-
-  const chips = document.createElement('div');
-  chips.className = 'chips';
-  for (const n of nodes) chips.appendChild(n);
-
-  row.appendChild(lab);
-  row.appendChild(chips);
-  return row;
-}
-
-function toggleSet(set, value) {
-  if (set.has(value)) set.delete(value);
-  else set.add(value);
+function sortByOrder(items, order) {
+  return [...items].sort((a, b) => {
+    const ia = order.indexOf(a.id);
+    const ib = order.indexOf(b.id);
+    if (ia !== -1 || ib !== -1) return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+    return b.count - a.count;
+  });
 }
 
 function renderFilters() {
-  const typeItems = [
-    { id: 'intern', label: '实习', count: allJobs.filter((j) => j.type === 'intern').length },
-    { id: 'campus', label: '应届', count: allJobs.filter((j) => j.type === 'campus').length },
-    { id: 'all', label: '不限', count: allJobs.length },
-  ];
-  const typeNodes = typeItems.map((it) =>
-    chip(it.label, it.count, state.type === it.id, () => {
-      state.type = it.id;
+  const groups = [];
+
+  const famItems = sortByOrder(countMap(allJobs, (j) => [j.family]), FAMILY_ORDER);
+  groups.push(
+    makeGroup('职能', null, famItems, state.families, (id) => {
+      if (state.families.has(id)) state.families.delete(id);
+      else state.families.add(id);
+      // 移除不再属于已选一级的二级选项
+      const valid = new Set(
+        allJobs.filter((j) => state.families.has(j.family)).map((j) => j.subFamily)
+      );
+      for (const sub of [...state.subFamilies]) {
+        if (!valid.has(sub)) state.subFamilies.delete(sub);
+      }
       renderFilters();
       render();
     })
   );
 
-  const rows = [makeRow('类型', typeNodes)];
-
-  if (favs.size > 0) {
-    rows.push(
-      makeRow('收藏', [
-        chip('只看收藏', favs.size, state.favOnly, () => {
-          state.favOnly = !state.favOnly;
-          renderFilters();
-          render();
-        }),
-      ])
+  // 二级：仅展示已选一级下的子类
+  if (state.families.size) {
+    const pool = allJobs.filter((j) => state.families.has(j.family));
+    const subItems = countMap(pool, (j) => [j.subFamily]).sort((a, b) => b.count - a.count);
+    groups.push(
+      makeGroup('细分方向', null, subItems, state.subFamilies, (id) => {
+        if (state.subFamilies.has(id)) state.subFamilies.delete(id);
+        else state.subFamilies.add(id);
+        renderFilters();
+        render();
+      }, { sub: true, emptyText: '该职能暂无细分数据' })
+    );
+  } else {
+    groups.push(
+      makeGroup('细分方向', null, [], state.subFamilies, () => {}, {
+        emptyText: '先勾选一个职能，这里会出现细分方向',
+      })
     );
   }
 
-  const cityItems = countMap(allJobs, (j) => j.cities);
-  const cityShown = cityExpanded ? cityItems : cityItems.slice(0, CITY_PREVIEW_LIMIT);
-  const cityNodes = cityShown.map((it) =>
-    chip(it.label, it.count, state.cities.has(it.id), () => {
-      toggleSet(state.cities, it.id);
-      renderFilters();
-      render();
-    })
-  );
-  if (cityItems.length > CITY_PREVIEW_LIMIT) {
-    const more = document.createElement('button');
-    more.type = 'button';
-    more.className = 'chip-more';
-    more.textContent = cityExpanded ? '收起' : '展开全部 ' + cityItems.length;
-    more.addEventListener('click', () => {
-      cityExpanded = !cityExpanded;
-      renderFilters();
-    });
-    cityNodes.push(more);
+  if (favs.size > 0) {
+    groups.push(
+      makeGroup('收藏', null, [{ id: '只看收藏', count: favs.size }],
+        new Set(state.favOnly ? ['只看收藏'] : []),
+        () => {
+          state.favOnly = !state.favOnly;
+          renderFilters();
+          render();
+        })
+    );
   }
 
-  const bgItems = countMap(allJobs, (j) => j.bgs);
-  const bgNodes = bgItems.map((it) =>
-    chip(it.label, it.count, state.bgs.has(it.id), () => {
-      toggleSet(state.bgs, it.id);
+  const allCities = countMap(allJobs, (j) => j.cities).sort((a, b) => b.count - a.count);
+  const cityShown = cityExpanded ? allCities : allCities.slice(0, 8);
+  const cityGroup = makeGroup(
+    '城市',
+    allCities.length > 8 && !cityExpanded ? '前 8 个' : null,
+    cityShown,
+    state.cities,
+    (id) => {
+      toggle(state.cities, id);
+      renderFilters();
+      render();
+    },
+    { emptyText: '暂无城市数据' }
+  );
+  if (allCities.length > 8 && !cityExpanded) {
+    const more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'filter-clear';
+    more.style.marginTop = '5px';
+    more.textContent = '显示全部 ' + allCities.length + ' 个';
+    more.addEventListener('click', () => {
+      cityExpanded = true;
+      renderFilters();
+    });
+    cityGroup.appendChild(more);
+  }
+  groups.push(cityGroup);
+
+  const bgItems = countMap(allJobs, (j) => j.bgs).sort((a, b) => b.count - a.count);
+  groups.push(
+    makeGroup('事业群', null, bgItems, state.bgs, (id) => {
+      toggle(state.bgs, id);
       renderFilters();
       render();
     })
   );
 
-  el.filters.replaceChildren(
-    ...rows,
-    makeRow('城市', cityNodes),
-    makeRow('事业群', bgNodes)
+  const projItems = countMap(allJobs, (j) => [j.project]).sort((a, b) => b.count - a.count);
+  groups.push(
+    makeGroup('招聘项目', null, projItems, state.projects, (id) => {
+      toggle(state.projects, id);
+      renderFilters();
+      render();
+    })
   );
 
-  updateBadge();
+  el.groups.replaceChildren(...groups);
+  renderActiveBar();
+  renderFilterCount();
 }
 
-function activeFilterCount() {
+function toggle(set, id) {
+  if (set.has(id)) set.delete(id);
+  else set.add(id);
+}
+
+/* ---------- 已选条件 ---------- */
+
+function collectActive() {
+  const out = [];
+  for (const v of state.families) out.push({ dim: 'families', key: v, label: '职能', text: v });
+  for (const v of state.subFamilies) out.push({ dim: 'subFamilies', key: v, label: '细分', text: v });
+  for (const v of state.cities) out.push({ dim: 'cities', key: v, label: '城市', text: v });
+  for (const v of state.bgs) out.push({ dim: 'bgs', key: v, label: '事业群', text: v });
+  for (const v of state.projects) out.push({ dim: 'projects', key: v, label: '项目', text: v });
+  if (state.favOnly) out.push({ dim: 'favOnly', key: 'fav', label: '收藏', text: '只看收藏' });
+  return out;
+}
+
+function renderActiveBar() {
+  const active = collectActive();
+  el.activeBar.hidden = active.length === 0;
+  if (!active.length) {
+    el.activeBar.replaceChildren();
+    return;
+  }
+
+  const nodes = active.map((item) => {
+    const chip = document.createElement('span');
+    chip.className = 'active-chip';
+    chip.appendChild(span(item.label + '：' + item.text));
+    const x = document.createElement('button');
+    x.type = 'button';
+    x.setAttribute('aria-label', '移除 ' + item.text);
+    x.textContent = '×';
+    x.addEventListener('click', () => {
+      if (item.dim === 'favOnly') state.favOnly = false;
+      else state[item.dim].delete(item.key);
+      renderFilters();
+      render();
+    });
+    chip.appendChild(x);
+    return chip;
+  });
+
+  const clear = document.createElement('button');
+  clear.type = 'button';
+  clear.className = 'reset-btn';
+  clear.textContent = '清空';
+  clear.addEventListener('click', resetFilters);
+  nodes.push(clear);
+
+  el.activeBar.replaceChildren(...nodes);
+}
+
+function activeCount() {
   return (
+    state.families.size +
+    state.subFamilies.size +
     state.cities.size +
     state.bgs.size +
-    (state.type !== 'intern' ? 1 : 0) +
+    state.projects.size +
     (state.favOnly ? 1 : 0)
   );
 }
 
-function updateBadge() {
-  const n = activeFilterCount();
-  el.filterBadge.hidden = n === 0;
-  el.filterBadge.textContent = String(n);
+function renderFilterCount() {
+  const n = activeCount();
+  el.filterCount.hidden = n === 0;
+  el.filterCount.textContent = String(n);
 }
 
 /* ---------- 列表 ---------- */
@@ -354,13 +399,31 @@ function filteredJobs() {
   const q = state.q.trim().toLowerCase();
   return allJobs.filter((job) => {
     if (state.favOnly && !favs.has(job.id)) return false;
-    if (state.tab !== 'all' && !job.tags.includes(state.tab)) return false;
     if (state.type !== 'all' && job.type !== state.type) return false;
+    if (state.families.size && !state.families.has(job.family)) return false;
+    if (state.subFamilies.size && !state.subFamilies.has(job.subFamily)) return false;
     if (state.cities.size && !job.cities.some((c) => state.cities.has(c))) return false;
     if (state.bgs.size && !job.bgs.some((b) => state.bgs.has(b))) return false;
+    if (state.projects.size && !state.projects.has(job.project)) return false;
     if (q && !job.title.toLowerCase().includes(q)) return false;
     return true;
   });
+}
+
+function svgIcon(pathD, cls) {
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 16 16');
+  svg.setAttribute('class', cls);
+  svg.setAttribute('aria-hidden', 'true');
+  const p = document.createElementNS(ns, 'path');
+  p.setAttribute('d', pathD);
+  p.setAttribute('fill', 'none');
+  p.setAttribute('stroke', 'currentColor');
+  p.setAttribute('stroke-width', '1.6');
+  p.setAttribute('stroke-linecap', 'round');
+  p.setAttribute('stroke-linejoin', 'round');
+  svg.appendChild(p);
+  return svg;
 }
 
 function tagKey(job) {
@@ -389,6 +452,7 @@ function createCard(job) {
   favBtn.className = 'fav' + (isFav ? ' is-on' : '');
   favBtn.setAttribute('aria-label', isFav ? '取消收藏' : '收藏');
   favBtn.setAttribute('aria-pressed', String(isFav));
+
   const star = document.createElementNS(ns, 'svg');
   star.setAttribute('viewBox', '0 0 16 16');
   const starPath = document.createElementNS(ns, 'path');
@@ -433,31 +497,32 @@ function createCard(job) {
   const tags = document.createElement('div');
   tags.className = 'job-tags';
 
-  if (job.tags.includes('ai')) tags.appendChild(span('AI', 'tag tag-ai'));
+  if (job.family) tags.appendChild(span(job.family, 'tag tag-family'));
   if (job.tags.includes('game')) tags.appendChild(span('游戏', 'tag tag-game'));
 
   const metaLine = document.createElement('span');
   metaLine.className = 'job-meta';
+
+  if (job.subFamily) metaLine.appendChild(span(job.subFamily));
   if (job.bgs.length) {
+    if (job.subFamily) metaLine.appendChild(dotSep());
     metaLine.appendChild(span(job.bgs[0], 'bg'));
     if (job.bgs.length > 1) metaLine.appendChild(span('+' + (job.bgs.length - 1)));
   }
   if (job.cities.length) {
-    if (job.bgs.length) metaLine.appendChild(dotSep());
+    metaLine.appendChild(dotSep());
     metaLine.appendChild(span(job.cities[0]));
     if (job.cities.length > 1) metaLine.appendChild(span('+' + (job.cities.length - 1)));
   }
   const fullMeta = [];
+  if (job.subFamily) fullMeta.push('细分：' + job.subFamily);
   if (job.bgs.length) fullMeta.push('事业群：' + job.bgs.join(' / '));
   if (job.cities.length) fullMeta.push('城市：' + job.cities.join(' / '));
   if (fullMeta.length) metaLine.title = fullMeta.join('　');
   tags.appendChild(metaLine);
 
   foot.appendChild(tags);
-
-  const proj = span(job.project, 'job-project');
-  proj.title = job.project;
-  foot.appendChild(proj);
+  foot.appendChild(span(job.project, 'job-project'));
 
   a.appendChild(head);
   a.appendChild(foot);
@@ -467,13 +532,12 @@ function createCard(job) {
 function render() {
   const jobs = filteredJobs();
 
-  const typeWord = state.type === 'intern' ? '实习' : state.type === 'campus' ? '应届' : '';
   const strong = document.createElement('strong');
   strong.textContent = String(jobs.length);
   el.count.replaceChildren(
     document.createTextNode('找到 '),
     strong,
-    document.createTextNode(' 个' + typeWord + '岗位')
+    document.createTextNode(' 个岗位')
   );
 
   if (!jobs.length) {
@@ -483,7 +547,6 @@ function render() {
   }
 
   el.empty.hidden = true;
-
   const frag = document.createDocumentFragment();
   for (const job of jobs) frag.appendChild(createCard(job));
   el.list.replaceChildren(frag);
@@ -491,27 +554,34 @@ function render() {
 
 /* ---------- 交互 ---------- */
 
-function setPanel(open) {
-  el.filterPanel.hidden = !open;
-  el.filterToggle.setAttribute('aria-expanded', String(open));
+function resetFilters() {
+  state.families.clear();
+  state.subFamilies.clear();
+  state.cities.clear();
+  state.bgs.clear();
+  state.projects.clear();
+  state.favOnly = false;
+  renderFilters();
+  render();
 }
 
 function resetAll() {
   state.q = '';
-  state.tab = 'all';
-  state.type = 'intern';
-  state.cities.clear();
-  state.bgs.clear();
-  state.favOnly = false;
+  state.type = 'all';
   el.search.value = '';
   el.searchClear.hidden = true;
-  for (const t of el.tabs.querySelectorAll('.tab')) {
-    const active = t.dataset.tab === 'all';
-    t.classList.toggle('is-active', active);
-    t.setAttribute('aria-selected', String(active));
+  for (const b of el.seg.querySelectorAll('.seg')) {
+    const active = b.dataset.type === 'all';
+    b.classList.toggle('is-active', active);
   }
-  renderFilters();
-  render();
+  resetFilters();
+}
+
+function setDrawer(open) {
+  el.sidebar.classList.toggle('is-open', open);
+  el.mask.hidden = !open;
+  el.filterOpen.setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';
 }
 
 el.search.addEventListener('input', (e) => {
@@ -532,31 +602,21 @@ el.searchClear.addEventListener('click', () => {
   render();
 });
 
-el.tabs.addEventListener('click', (e) => {
-  const btn = e.target.closest('.tab');
+el.seg.addEventListener('click', (e) => {
+  const btn = e.target.closest('.seg');
   if (!btn) return;
-  state.tab = btn.dataset.tab;
-  for (const t of el.tabs.querySelectorAll('.tab')) {
-    const active = t === btn;
-    t.classList.toggle('is-active', active);
-    t.setAttribute('aria-selected', String(active));
+  state.type = btn.dataset.type;
+  for (const b of el.seg.querySelectorAll('.seg')) {
+    b.classList.toggle('is-active', b === btn);
   }
   render();
 });
 
-el.filterToggle.addEventListener('click', () => {
-  setPanel(el.filterPanel.hidden);
-});
+el.filterOpen.addEventListener('click', () => setDrawer(true));
+el.sideClose.addEventListener('click', () => setDrawer(false));
+el.mask.addEventListener('click', () => setDrawer(false));
 
-el.filterClear.addEventListener('click', () => {
-  state.cities.clear();
-  state.bgs.clear();
-  state.type = 'intern';
-  state.favOnly = false;
-  renderFilters();
-  render();
-});
-
+el.filterReset.addEventListener('click', resetFilters);
 el.reset.addEventListener('click', resetAll);
 el.emptyReset.addEventListener('click', resetAll);
 
@@ -565,12 +625,15 @@ document.addEventListener('keydown', (e) => {
     e.preventDefault();
     el.search.focus();
   }
-  if (e.key === 'Escape' && document.activeElement === el.search) {
-    el.search.value = '';
-    el.searchClear.hidden = true;
-    state.q = '';
-    el.search.blur();
-    render();
+  if (e.key === 'Escape') {
+    if (el.sidebar.classList.contains('is-open')) setDrawer(false);
+    else if (document.activeElement === el.search) {
+      el.search.value = '';
+      el.searchClear.hidden = true;
+      state.q = '';
+      el.search.blur();
+      render();
+    }
   }
 });
 

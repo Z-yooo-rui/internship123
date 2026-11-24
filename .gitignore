@@ -11,3 +11,6 @@ __pycache__/
 # 系统
 .DS_Store
 Thumbs.db
+
+# 临时抓取产物
+.tmp/

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>腾讯 AI / 游戏岗位 · 实习与校招聚合</title>
-<meta name="description" content="自动汇总腾讯在招的 AI 与游戏方向实习、应届岗位，每 2 小时更新，点击直达官网投递页。">
+<title>腾讯校招岗位 · 按职能筛选</title>
+<meta name="description" content="腾讯校招岗位聚合，覆盖技术、产品、设计、市场、职能与 AI 研究六大方向，支持职能、城市、事业群多维筛选，每 2 小时自动更新。">
 <meta name="theme-color" content="#FAFAFA">
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="./assets/style.css">
@@ -18,7 +18,7 @@
       <span class="logo-text">Tencent Roles</span>
       <span class="logo-badge">非官方</span>
     </div>
-    <div class="topbar-meta" id="topbar-meta">
+    <div class="topbar-meta">
       <span class="pulse" aria-hidden="true"></span>
       <span id="topbar-time">加载中</span>
     </div>
@@ -27,123 +27,111 @@
 
 <section class="hero">
   <div class="shell">
-    <div class="hero-grid">
-      <div class="hero-main">
-        <p class="hero-eyebrow">腾讯校招 · 实习与应届</p>
-        <h1 class="hero-title">AI 与游戏方向的岗位<br>一页看完</h1>
-        <p class="hero-sub">自动抓取腾讯招聘官网在招职位，按方向整理。不用再翻十几个页面找「这个岗是不是做 AI」。</p>
+    <p class="hero-eyebrow">腾讯校园招聘 · 数据来自官网</p>
+    <h1 class="hero-title">腾讯的岗位，<br>按职能筛到底</h1>
+    <p class="hero-sub">技术、产品、设计、市场、职能、AI 研究六大方向，AI 研究再往下拆七个技术领域。不用再猜「这个岗到底做什么」。</p>
 
-        <div class="stats" id="stats">
-          <div class="stat">
-            <span class="stat-num" id="stat-total">—</span>
-            <span class="stat-label">在招岗位</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" id="stat-ai">—</span>
-            <span class="stat-label">AI 方向</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" id="stat-game">—</span>
-            <span class="stat-label">游戏方向</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" id="stat-intern">—</span>
-            <span class="stat-label">实习岗位</span>
-          </div>
-        </div>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num" id="stat-total">—</span>
+        <span class="stat-label">在招岗位</span>
       </div>
-
-      <aside class="dist-card" aria-label="岗位分布">
-        <div class="dist-head">
-          <h2 class="dist-title">岗位分布</h2>
-          <span class="dist-note">全站在招</span>
-        </div>
-        <div class="dist-block">
-          <p class="dist-label">城市</p>
-          <div class="dist-bars" id="dist-cities"></div>
-        </div>
-        <div class="dist-block">
-          <p class="dist-label">事业群</p>
-          <div class="dist-bars" id="dist-bgs"></div>
-        </div>
-      </aside>
+      <div class="stat">
+        <span class="stat-num" id="stat-ai">—</span>
+        <span class="stat-label">AI 研究</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="stat-tech">—</span>
+        <span class="stat-label">技术</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="stat-intern">—</span>
+        <span class="stat-label">实习</span>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="controlbar" id="controlbar">
-  <div class="shell">
-    <div class="controlbar-inner">
+<div class="shell layout">
+
+  <aside class="sidebar" id="sidebar" aria-label="筛选条件">
+    <div class="sidebar-head">
+      <span class="sidebar-title">筛选</span>
+      <button class="sidebar-close" id="sidebar-close" type="button">完成</button>
+    </div>
+    <div class="sidebar-body" id="filter-groups"></div>
+    <div class="sidebar-foot">
+      <button class="filter-clear" id="filter-reset" type="button">清空全部条件</button>
+    </div>
+  </aside>
+
+  <div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+  <main class="content">
+    <div class="content-head">
       <div class="search-box">
         <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true">
           <circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
           <path d="M12.8 12.8 L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
         </svg>
-        <input id="search" type="search" placeholder="搜索岗位，如 大模型、引擎、策划" autocomplete="off" aria-label="搜索岗位名称">
+        <input id="search" type="search" placeholder="搜索岗位名称，如 大模型、引擎、原画" autocomplete="off" aria-label="搜索岗位名称">
         <kbd class="search-kbd" id="search-kbd">/</kbd>
         <button id="search-clear" class="search-clear" type="button" aria-label="清空搜索" hidden>×</button>
       </div>
 
-      <div class="tabs" id="tabs" role="tablist" aria-label="方向切换">
-        <button class="tab is-active" data-tab="all" role="tab" aria-selected="true">全部</button>
-        <button class="tab" data-tab="ai" role="tab" aria-selected="false">AI</button>
-        <button class="tab" data-tab="game" role="tab" aria-selected="false">游戏</button>
+      <div class="segmented" id="type-seg" role="group" aria-label="招聘类型">
+        <button class="seg is-active" data-type="all" type="button">全部</button>
+        <button class="seg" data-type="intern" type="button">实习</button>
+        <button class="seg" data-type="campus" type="button">应届</button>
       </div>
 
-      <button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-panel">
+      <button class="filter-open" id="filter-open" type="button" aria-expanded="false">
         <svg viewBox="0 0 16 16" aria-hidden="true">
           <path d="M2 4h12M4.5 8h7M6.5 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <span>筛选</span>
-        <span class="filter-badge" id="filter-badge" hidden>0</span>
+        筛选
+        <span class="filter-count" id="filter-count" hidden>0</span>
       </button>
     </div>
 
-    <div class="filter-panel" id="filter-panel" hidden>
-      <div id="filters"></div>
-      <div class="filter-foot">
-        <button class="filter-clear" id="filter-clear" type="button">清空筛选</button>
+    <div class="active-bar" id="active-bar" hidden></div>
+
+    <div class="result-bar">
+      <p class="result-text" id="result-count">—</p>
+      <button class="reset-btn" id="reset" type="button">重置</button>
+    </div>
+
+    <div class="grid" id="list"></div>
+
+    <div class="empty" id="empty" hidden>
+      <div class="empty-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="13" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M31 31 L41 41" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
       </div>
+      <p class="empty-title">没有匹配的岗位</p>
+      <p class="empty-hint">换个关键词，或者放宽筛选条件试试</p>
+      <button class="btn-primary" id="empty-reset" type="button">清空全部条件</button>
     </div>
-  </div>
+
+    <div class="empty" id="error" hidden>
+      <p class="empty-title">数据没能加载出来</p>
+      <p class="empty-hint" id="error-hint">请检查网络后刷新页面</p>
+      <button class="btn-primary" type="button" onclick="location.reload()">重新加载</button>
+    </div>
+
+    <div class="skeleton-grid" id="skeleton" aria-hidden="true"></div>
+  </main>
 </div>
-
-<main class="shell main">
-  <div class="result-bar">
-    <p class="result-text" id="result-count">—</p>
-    <button class="reset-btn" id="reset" type="button">重置全部</button>
-  </div>
-
-  <div class="grid" id="list"></div>
-
-  <div class="empty" id="empty" hidden>
-    <div class="empty-icon" aria-hidden="true">
-      <svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="13" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M31 31 L41 41" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-    </div>
-    <p class="empty-title">没有匹配的岗位</p>
-    <p class="empty-hint">换个关键词，或者放宽筛选条件试试</p>
-    <button class="btn-primary" id="empty-reset" type="button">重置全部条件</button>
-  </div>
-
-  <div class="empty" id="error" hidden>
-    <p class="empty-title">数据没能加载出来</p>
-    <p class="empty-hint" id="error-hint">请检查网络后刷新页面</p>
-    <button class="btn-primary" type="button" onclick="location.reload()">重新加载</button>
-  </div>
-
-  <div class="skeleton-grid" id="skeleton" aria-hidden="true"></div>
-</main>
 
 <footer class="site-footer">
   <div class="shell">
     <div class="footer-inner">
       <div>
         <p class="footer-title">关于数据</p>
-        <p>岗位来自腾讯校招官网公开接口，每 2 小时自动抓取一次。信息以官网为准，本站不做筛选建议，也不收集任何个人信息。</p>
+        <p>岗位与职能分类均取自腾讯招聘官网公开接口，分类是官方口径，不是本站猜测。信息以官网为准，本站不做投递建议，也不收集任何个人信息。</p>
       </div>
-      <div class="footer-right">
+      <div>
         <p class="footer-title">更新机制</p>
-        <p>GitHub Actions 定时任务 + 静态托管，页面顶部的时间是实际抓取时间。若接口异常，页面会保留上一次的数据。</p>
+        <p>GitHub Actions 每 2 小时抓取一次，只在新岗位出现或下架时更新。若接口异常，页面保留上一次数据。</p>
       </div>
     </div>
     <p class="footer-bottom">Built with vanilla JS · Deployed on GitHub Pages</p>
