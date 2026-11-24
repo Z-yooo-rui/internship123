@@ -3,12 +3,19 @@ const FAV_KEY = 'tencent-roles:favs';
 const SEARCH_DEBOUNCE_MS = 120;
 const STALE_HOURS = 24;
 const FAMILY_ORDER = ['AI 研究', '技术', '产品', '设计', '市场', '职能'];
+const EDU_ORDER = ['大专', '本科', '硕士', '博士'];
+const MAJOR_ORDER = [
+  '不限', '计算机 / 软件', '电子 / 通信', '设计 / 艺术',
+  '数理 / 统计', '金融 / 商科', '人文 / 社科',
+];
 
 const state = {
   q: '',
   type: 'all',
   families: new Set(),
   subFamilies: new Set(),
+  edus: new Set(),
+  majors: new Set(),
   cities: new Set(),
   bgs: new Set(),
   projects: new Set(),
@@ -259,6 +266,31 @@ function renderFilters() {
     );
   }
 
+  const eduItems = (meta.edus || []).map((e) => ({ id: e.name, count: e.count }));
+  groups.push(
+    makeGroup('学历', '未标注也显示', eduItems, state.edus, (id) => {
+      toggle(state.edus, id);
+      renderFilters();
+      render();
+    }, { emptyText: 'JD 里暂无学历信息' })
+  );
+
+  const majorItems = (meta.majors || [])
+    .map((m) => ({ id: m.name, count: m.count }))
+    .sort((a, b) => {
+      // 「不限」永远置顶，其余按岗位数降序
+      if (a.id === '不限') return -1;
+      if (b.id === '不限') return 1;
+      return b.count - a.count;
+    });
+  groups.push(
+    makeGroup('专业', '未标注也显示', majorItems, state.majors, (id) => {
+      toggle(state.majors, id);
+      renderFilters();
+      render();
+    }, { emptyText: 'JD 里暂无专业信息' })
+  );
+
   if (favs.size > 0) {
     groups.push(
       makeGroup('收藏', null, [{ id: '只看收藏', count: favs.size }],
@@ -333,6 +365,8 @@ function collectActive() {
   const out = [];
   for (const v of state.families) out.push({ dim: 'families', key: v, label: '职能', text: v });
   for (const v of state.subFamilies) out.push({ dim: 'subFamilies', key: v, label: '细分', text: v });
+  for (const v of state.edus) out.push({ dim: 'edus', key: v, label: '学历', text: v });
+  for (const v of state.majors) out.push({ dim: 'majors', key: v, label: '专业', text: v });
   for (const v of state.cities) out.push({ dim: 'cities', key: v, label: '城市', text: v });
   for (const v of state.bgs) out.push({ dim: 'bgs', key: v, label: '事业群', text: v });
   for (const v of state.projects) out.push({ dim: 'projects', key: v, label: '项目', text: v });
@@ -380,6 +414,8 @@ function activeCount() {
   return (
     state.families.size +
     state.subFamilies.size +
+    state.edus.size +
+    state.majors.size +
     state.cities.size +
     state.bgs.size +
     state.projects.size +
@@ -402,6 +438,13 @@ function filteredJobs() {
     if (state.type !== 'all' && job.type !== state.type) return false;
     if (state.families.size && !state.families.has(job.family)) return false;
     if (state.subFamilies.size && !state.subFamilies.has(job.subFamily)) return false;
+    // 学历：JD 里没写要求的岗位一律保留（未标注 = 无限制）
+    if (state.edus.size && job.edu && !state.edus.has(job.edu)) return false;
+    // 专业：同理，未提取到专业要求的保留
+    if (state.majors.size) {
+      const mj = job.majors || [];
+      if (mj.length && !mj.some((m) => state.majors.has(m))) return false;
+    }
     if (state.cities.size && !job.cities.some((c) => state.cities.has(c))) return false;
     if (state.bgs.size && !job.bgs.some((b) => state.bgs.has(b))) return false;
     if (state.projects.size && !state.projects.has(job.project)) return false;
@@ -499,6 +542,7 @@ function createCard(job) {
 
   if (job.family) tags.appendChild(span(job.family, 'tag tag-family'));
   if (job.tags.includes('game')) tags.appendChild(span('游戏', 'tag tag-game'));
+  if (job.edu) tags.appendChild(span(job.edu, 'tag tag-edu'));
 
   const metaLine = document.createElement('span');
   metaLine.className = 'job-meta';
@@ -534,11 +578,24 @@ function render() {
 
   const strong = document.createElement('strong');
   strong.textContent = String(jobs.length);
-  el.count.replaceChildren(
+  const parts = [
     document.createTextNode('找到 '),
     strong,
-    document.createTextNode(' 个岗位')
-  );
+    document.createTextNode(' 个岗位'),
+  ];
+
+  // 学历/专业是「未标注即不限」的通配逻辑，这里说清有多少是真写了要求的
+  const hints = [];
+  if (state.edus.size) {
+    hints.push(jobs.filter((j) => j.edu).length + ' 个明确写了学历');
+  }
+  if (state.majors.size) {
+    hints.push(jobs.filter((j) => (j.majors || []).length).length + ' 个明确写了专业');
+  }
+  if (hints.length) {
+    parts.push(document.createTextNode('，其中 ' + hints.join('、')));
+  }
+  el.count.replaceChildren(...parts);
 
   if (!jobs.length) {
     el.list.replaceChildren();
@@ -547,8 +604,18 @@ function render() {
   }
 
   el.empty.hidden = true;
+
+  // 有学历/专业筛选时把带标注的排前面，避免用户以为筛选没生效
+  let ordered = jobs;
+  if (state.edus.size || state.majors.size) {
+    const score = (j) =>
+      (state.edus.size && j.edu ? 1 : 0) +
+      (state.majors.size && (j.majors || []).length ? 1 : 0);
+    ordered = [...jobs].sort((a, b) => score(b) - score(a));
+  }
+
   const frag = document.createDocumentFragment();
-  for (const job of jobs) frag.appendChild(createCard(job));
+  for (const job of ordered) frag.appendChild(createCard(job));
   el.list.replaceChildren(frag);
 }
 
@@ -557,6 +624,8 @@ function render() {
 function resetFilters() {
   state.families.clear();
   state.subFamilies.clear();
+  state.edus.clear();
+  state.majors.clear();
   state.cities.clear();
   state.bgs.clear();
   state.projects.clear();

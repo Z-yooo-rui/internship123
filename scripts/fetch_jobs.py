@@ -33,12 +33,28 @@ DETAIL_API = "https://join.qq.com/api/v1/jobDetails/getJobDetailsByPostId?postId
 PAGE_URL = "https://join.qq.com/post_detail.html?postid={post_id}"
 REFERER = "https://join.qq.com/"
 PAGE_SIZE = 100
-DETAIL_DELAY = 0.18
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
 CST = timezone(timedelta(hours=8))
+
+# JD 正文分散在多个字段里，青云计划类岗位只有课题描述
+TEXT_FIELDS = (
+    "desc", "request", "graduateBonus", "internBonus",
+    "introduction", "topicDetail", "topicRequirement",
+)
+
+EDU_ORDER = {"大专": 1, "本科": 2, "硕士": 3, "博士": 4}
+
+MAJOR_GROUPS = {
+    "计算机 / 软件": ["计算机", "软件工程", "软件", "人工智能", "数据科学", "信息安全", "网络工程"],
+    "电子 / 通信": ["电子", "通信", "信号", "集成电路", "微电子", "自动化"],
+    "设计 / 艺术": ["设计", "美术", "动画", "影视", "视觉", "交互", "艺术"],
+    "数理 / 统计": ["数学", "统计", "物理", "运筹"],
+    "金融 / 商科": ["金融", "经济", "会计", "财务", "供应链", "市场营销", "商业分析", "管理"],
+    "人文 / 社科": ["法律", "法学", "政治学", "社会学", "心理", "新闻", "中文", "语言", "哲学"],
+}
 
 ROOT = Path(__file__).resolve().parent.parent
 RULES_PATH = ROOT / "config" / "rules.json"
@@ -119,24 +135,30 @@ def fetch_all(max_pages=None):
 # ---------- 详情缓存 ----------
 
 def load_cache():
+    """缓存条目形如 {postId: {fid, edu, majors, enriched}}。兼容旧版纯 fid 整数。"""
     if not CACHE_PATH.exists():
         return {}
     try:
         raw = load_json(CACHE_PATH)
-        out = {}
-        for k, v in (raw.get("map") or {}).items():
-            try:
-                out[str(k)] = int(v)
-            except (TypeError, ValueError):
-                continue
-        return out
     except (json.JSONDecodeError, OSError):
         return {}
+
+    out = {}
+    for k, v in (raw.get("map") or {}).items():
+        pid = str(k)
+        if isinstance(v, dict):
+            out[pid] = v
+        else:
+            try:
+                out[pid] = {"fid": int(v)}
+            except (TypeError, ValueError):
+                continue
+    return out
 
 
 def save_cache(cache):
     payload = {
-        "version": 1,
+        "version": 2,
         "updated_at": datetime.now(CST).isoformat(timespec="seconds"),
         "map": dict(sorted(cache.items())),
     }
@@ -146,7 +168,44 @@ def save_cache(cache):
         fh.write("\n")
 
 
-def fetch_fid(post_id, retries=2):
+def extract_edu(text):
+    """取最低学历门槛。『本科及以上』『博士/硕士』都按最低那一档算。"""
+    if not text:
+        return None
+    found = set()
+    if "博士" in text:
+        found.add("博士")
+    if "硕士" in text or "研究生" in text:
+        found.add("硕士")
+    if "本科" in text:
+        found.add("本科")
+    if "大专" in text or "专科" in text:
+        found.add("大专")
+    if not found:
+        return None
+    return min(found, key=lambda x: EDU_ORDER[x])
+
+
+def extract_majors(text):
+    """
+    只在「专业」二字前后取窗口匹配，避免『确保内容兼具专业性』这类噪音。
+    命中多个学科归并返回；明确写「专业不限」直接返回 ['不限']。
+    """
+    if not text:
+        return []
+    if re.search(r"专业不限|不限专业|无专业限制|不限学科", text):
+        return ["不限"]
+
+    hits = set()
+    for m in re.finditer("专业", text):
+        window = text[max(0, m.start() - 32): m.end() + 12]
+        for group, kws in MAJOR_GROUPS.items():
+            if any(kw in window for kw in kws):
+                hits.add(group)
+    return sorted(hits)
+
+
+def fetch_detail(post_id, retries=2):
     url = DETAIL_API.format(post_id=post_id)
     try:
         body = request_json(url, retries=retries, timeout=25)
@@ -154,20 +213,32 @@ def fetch_fid(post_id, retries=2):
         return None
     if body.get("status") != 0:
         return None
+
     data = body.get("data") or {}
     fid = data.get("fid")
     try:
-        return int(fid) if fid not in (None, "", 0) else None
+        fid = int(fid) if fid not in (None, "", 0) else None
     except (TypeError, ValueError):
-        return None
+        fid = None
+
+    text = " ".join(str(data.get(k) or "") for k in TEXT_FIELDS)
+    return {
+        "fid": fid,
+        "edu": extract_edu(text),
+        "majors": extract_majors(text),
+        "enriched": True,
+    }
 
 
 def enrich_details(items, cache, workers=4):
-    """并发抓详情。首次全量约 2-3 分钟，之后每轮只补新增岗位。"""
-    missing = [it for it in items if str(it.get("postId")) not in cache]
+    """并发抓详情。旧格式缓存（只有 fid）也会重新补抓一次。"""
+    missing = [
+        it for it in items
+        if not (cache.get(str(it.get("postId"))) or {}).get("enriched")
+    ]
     total = len(missing)
     if not total:
-        log("详情缓存已覆盖全部岗位，跳过抓取")
+        log("详情缓存已完整覆盖，跳过抓取")
         return cache, 0, 0
 
     log("需补抓详情 {} 条（缓存已有 {} 条），{} 并发".format(total, len(cache), workers))
@@ -175,18 +246,18 @@ def enrich_details(items, cache, workers=4):
 
     def task(item):
         pid = str(item.get("postId"))
-        return pid, fetch_fid(pid)
+        return pid, fetch_detail(pid)
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = [pool.submit(task, it) for it in missing]
         for idx, fut in enumerate(as_completed(futures), 1):
             try:
-                pid, fid = fut.result()
+                pid, detail = fut.result()
             except Exception:
                 fail += 1
                 continue
-            if fid:
-                cache[pid] = fid
+            if detail:
+                cache[pid] = detail
                 ok += 1
             else:
                 fail += 1
@@ -262,7 +333,9 @@ def build_jobs(raw_items, rules, families, cache):
 
         family_id = str(raw.get("positionFamily") or "")
         family = families["level1"].get(family_id)
-        fid = cache.get(post_id)
+
+        entry = cache.get(post_id) or {}
+        fid = entry.get("fid")
         level2 = families["level2"].get(str(fid)) if fid else None
         sub_family = level2.get("name") if level2 else None
         if fid and not sub_family:
@@ -281,6 +354,8 @@ def build_jobs(raw_items, rules, families, cache):
                 "familyId": family_id,
                 "family": family,
                 "subFamily": sub_family,
+                "edu": entry.get("edu"),
+                "majors": entry.get("majors") or [],
                 "tags": tags,
                 "url": PAGE_URL.format(post_id=post_id),
             }
@@ -332,18 +407,27 @@ def build_meta(jobs, source_total, raw_total, project_counter, dup, cache, detai
     sub_counter = {}
     city_counter = {}
     bg_counter = {}
+    edu_counter = {}
+    major_counter = {}
 
     for job in jobs:
         if job["family"]:
             family_counter[job["family"]] = family_counter.get(job["family"], 0) + 1
         if job["subFamily"]:
             sub_counter[job["subFamily"]] = sub_counter.get(job["subFamily"], 0) + 1
+        if job.get("edu"):
+            edu_counter[job["edu"]] = edu_counter.get(job["edu"], 0) + 1
+        for m in (job.get("majors") or []):
+            major_counter[m] = major_counter.get(m, 0) + 1
         for city in job["cities"]:
             city_counter[city] = city_counter.get(city, 0) + 1
         for bg in job["bgs"]:
             bg_counter[bg] = bg_counter.get(bg, 0) + 1
 
     with_sub = sum(1 for j in jobs if j["subFamily"])
+    with_edu = sum(1 for j in jobs if j.get("edu"))
+    with_major = sum(1 for j in jobs if j.get("majors"))
+
     return {
         "fetched_at": now.isoformat(timespec="seconds"),
         "fetched_at_display": now.strftime("%Y-%m-%d %H:%M"),
@@ -361,6 +445,8 @@ def build_meta(jobs, source_total, raw_total, project_counter, dup, cache, detai
         "detail_fetched": detail_ok,
         "detail_failed": detail_fail,
         "subfamily_coverage": round(with_sub / len(jobs), 3) if jobs else 0,
+        "edu_coverage": round(with_edu / len(jobs), 3) if jobs else 0,
+        "major_coverage": round(with_major / len(jobs), 3) if jobs else 0,
         "families": [
             {"name": k, "count": v}
             for k, v in sorted(family_counter.items(), key=lambda kv: -kv[1])
@@ -368,6 +454,14 @@ def build_meta(jobs, source_total, raw_total, project_counter, dup, cache, detai
         "subFamilies": [
             {"name": k, "count": v}
             for k, v in sorted(sub_counter.items(), key=lambda kv: -kv[1])
+        ],
+        "edus": [
+            {"name": k, "count": v}
+            for k, v in sorted(edu_counter.items(), key=lambda kv: EDU_ORDER.get(kv[0], 9))
+        ],
+        "majors": [
+            {"name": k, "count": v}
+            for k, v in sorted(major_counter.items(), key=lambda kv: -kv[1])
         ],
         "projects": dict(sorted(project_counter.items(), key=lambda kv: -kv[1])),
         "cities": [
@@ -382,9 +476,12 @@ def build_meta(jobs, source_total, raw_total, project_counter, dup, cache, detai
 
 
 def signature(jobs):
-    """用于判断内容是否变化。用 get 兼容旧格式数据（早期没有 fid / family 字段）。"""
+    """用于判断内容是否变化。用 get 兼容旧格式数据。"""
     return [
-        (j.get("id"), j.get("title"), j.get("type"), j.get("fid"), tuple(j.get("tags") or []))
+        (
+            j.get("id"), j.get("title"), j.get("type"), j.get("fid"),
+            j.get("edu"), tuple(j.get("majors") or []), tuple(j.get("tags") or []),
+        )
         for j in jobs
     ]
 
@@ -426,6 +523,12 @@ def main():
     log("AI / 游戏徽标 : {} / {}（重叠 {}）".format(
         meta["ai_count"], meta["game_count"], meta["both_count"]))
     log("子分类覆盖率  : {:.0%}".format(meta["subfamily_coverage"]))
+    log("学历覆盖率    : {:.0%}  {}".format(
+        meta["edu_coverage"],
+        "，".join("{}({})".format(e["name"], e["count"]) for e in meta["edus"]) or "无"))
+    log("专业覆盖率    : {:.0%}  {}".format(
+        meta["major_coverage"],
+        "，".join("{}({})".format(m["name"], m["count"]) for m in meta["majors"]) or "无"))
     log("一级分类      : {}".format(
         "，".join("{}({})".format(f["name"], f["count"]) for f in meta["families"])))
     log("")

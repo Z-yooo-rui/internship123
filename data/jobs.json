@@ -1,7 +1,7 @@
 {
  "meta": {
-  "fetched_at": "2026-11-24T19:31:10+08:00",
-  "fetched_at_display": "2026-11-24 19:31",
+  "fetched_at": "2026-11-24T20:07:04+08:00",
+  "fetched_at_display": "2026-11-24 20:07",
   "source_total": 882,
   "source_count": 882,
   "kept_count": 882,
@@ -12,10 +12,12 @@
   "both_count": 152,
   "dropped_count": 0,
   "merged_duplicates": 0,
-  "detail_cache_total": 877,
-  "detail_fetched": 0,
-  "detail_failed": 5,
+  "detail_cache_total": 882,
+  "detail_fetched": 882,
+  "detail_failed": 0,
   "subfamily_coverage": 0.994,
+  "edu_coverage": 0.686,
+  "major_coverage": 0.762,
   "families": [
    {
     "name": "AI 研究",
@@ -160,6 +162,54 @@
     "count": 2
    }
   ],
+  "edus": [
+   {
+    "name": "大专",
+    "count": 1
+   },
+   {
+    "name": "本科",
+    "count": 97
+   },
+   {
+    "name": "硕士",
+    "count": 469
+   },
+   {
+    "name": "博士",
+    "count": 38
+   }
+  ],
+  "majors": [
+   {
+    "name": "计算机 / 软件",
+    "count": 584
+   },
+   {
+    "name": "电子 / 通信",
+    "count": 269
+   },
+   {
+    "name": "数理 / 统计",
+    "count": 244
+   },
+   {
+    "name": "设计 / 艺术",
+    "count": 122
+   },
+   {
+    "name": "人文 / 社科",
+    "count": 116
+   },
+   {
+    "name": "金融 / 商科",
+    "count": 44
+   },
+   {
+    "name": "不限",
+    "count": 15
+   }
+  ],
   "projects": {
    "青云计划-实习生": 349,
    "青云计划-应届生": 260,
@@ -295,6 +345,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -317,6 +369,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -339,6 +393,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -362,6 +418,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -384,6 +442,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -406,6 +466,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -434,6 +496,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -457,6 +521,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1281982531969065984"
   },
@@ -476,6 +545,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "安全技术",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "ai"
    ],
@@ -497,6 +570,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1244039890011040768"
   },
@@ -518,6 +596,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "解决方案与服务",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1241478075938909184"
   },
@@ -539,6 +619,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "安全技术",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -560,6 +644,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -581,6 +667,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -607,6 +697,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "解决方案与服务",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226979621736977408"
   },
@@ -626,6 +718,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "硬件开发",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226955046730999808"
   },
@@ -649,6 +746,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875824360559616"
   },
@@ -668,6 +770,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "博士",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226585122263148544"
   },
@@ -689,6 +793,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信"
+   ],
    "tags": [
     "ai",
     "game"
@@ -714,6 +823,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -735,6 +849,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1219025706886098944"
   },
@@ -754,6 +873,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -781,6 +905,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "安全技术",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -810,6 +938,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "安全技术",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "ai",
     "game"
@@ -834,6 +966,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -862,6 +998,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -889,6 +1029,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -919,6 +1065,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -944,6 +1096,13 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -965,6 +1124,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -991,6 +1156,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1014,6 +1185,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1041,6 +1218,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1063,6 +1246,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1212183855952704513"
   },
@@ -1082,6 +1269,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1212183855952704512"
   },
@@ -1101,6 +1292,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -1128,6 +1325,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1212080150968274944"
   },
@@ -1148,6 +1349,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "硬件开发",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1212080125831811072"
   },
@@ -1171,6 +1377,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -1198,6 +1410,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "测试与质量管理",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1212080123424280576"
   },
@@ -1219,6 +1435,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -1241,6 +1461,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -1264,6 +1488,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1211741011563656192"
   },
@@ -1288,6 +1516,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1319,6 +1552,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1351,6 +1590,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1211674475813408768"
   },
@@ -1378,6 +1621,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -1407,6 +1654,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1211674468209135616"
   },
@@ -1434,6 +1686,13 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1462,6 +1721,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -1486,6 +1750,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1210646470286783494"
   },
@@ -1510,6 +1776,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1540,6 +1812,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1571,6 +1849,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -1596,6 +1879,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -1621,6 +1909,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -1651,6 +1943,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1210569901664899072"
   },
@@ -1670,6 +1966,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1209171621219493888"
   },
@@ -1689,6 +1987,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -1710,6 +2014,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -1736,6 +2046,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -1766,6 +2078,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1800,6 +2118,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -1829,6 +2152,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -1852,6 +2181,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "解决方案与服务",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1153452731391100928"
   },
@@ -1872,6 +2203,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": null,
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=-2"
   },
@@ -1891,6 +2224,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -1912,6 +2247,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -1933,6 +2270,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1307853576416231425"
   },
@@ -1952,6 +2295,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1307853576416231424"
   },
@@ -1971,6 +2321,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1306974476940050432"
   },
@@ -1990,6 +2342,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1298382438912983040"
   },
@@ -2010,6 +2368,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2031,6 +2395,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -2055,6 +2421,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -2076,6 +2448,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -2098,6 +2476,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2121,6 +2504,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2144,6 +2532,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1293212684929695744"
   },
@@ -2165,6 +2558,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1293212684925501443"
   },
@@ -2186,6 +2584,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2208,6 +2611,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1293212684925501441"
   },
@@ -2229,6 +2637,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2252,6 +2665,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1293194428185772033"
   },
@@ -2272,6 +2690,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -2295,6 +2715,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -2319,6 +2745,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -2342,6 +2770,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2366,6 +2799,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -2390,6 +2825,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1287771601961893889"
   },
@@ -2410,6 +2850,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2433,6 +2878,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1287771593065775105"
   },
@@ -2454,6 +2904,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2476,6 +2931,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2497,6 +2957,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2518,6 +2983,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2539,6 +3008,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282757520922109952"
   },
@@ -2558,6 +3031,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "本科",
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "ai"
    ],
@@ -2579,6 +3056,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2600,6 +3081,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2621,6 +3107,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1280285760972760064"
   },
@@ -2640,6 +3131,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -2662,6 +3158,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2683,6 +3185,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -2704,6 +3208,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -2725,6 +3231,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2746,6 +3256,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1279258990471390208"
   },
@@ -2765,6 +3277,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2786,6 +3302,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274356458519403520"
   },
@@ -2805,6 +3325,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "大专",
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -2826,6 +3350,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -2847,6 +3373,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -2869,6 +3400,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -2891,6 +3428,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -2913,6 +3452,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2934,6 +3477,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2955,6 +3503,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1237440383043269633"
   },
@@ -2974,6 +3524,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -2997,6 +3551,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -3018,6 +3578,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1236099085644457989"
   },
@@ -3037,6 +3602,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1236099085644457988"
   },
@@ -3056,6 +3626,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1236099085644457987"
   },
@@ -3075,6 +3650,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -3096,6 +3677,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3118,6 +3705,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -3140,6 +3733,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -3161,6 +3759,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -3182,6 +3782,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -3203,6 +3809,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231998633466259456"
   },
@@ -3222,6 +3834,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -3243,6 +3859,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3265,6 +3887,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3287,6 +3913,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3309,6 +3939,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3331,6 +3965,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3353,6 +3992,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -3374,6 +4015,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3396,6 +4042,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3418,6 +4070,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3440,6 +4098,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3462,6 +4126,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3484,6 +4154,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3506,6 +4180,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3528,6 +4207,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3550,6 +4233,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3572,6 +4262,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3594,6 +4290,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -3615,6 +4317,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3637,6 +4345,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3659,6 +4373,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3681,6 +4402,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3703,6 +4430,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3725,6 +4457,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3747,6 +4483,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3769,6 +4511,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -3790,6 +4538,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -3811,6 +4565,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3833,6 +4593,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3855,6 +4621,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3877,6 +4650,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3899,6 +4677,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3921,6 +4703,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计"
+   ],
    "tags": [
     "game"
    ],
@@ -3942,6 +4728,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -3963,6 +4751,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -3985,6 +4777,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -4007,6 +4804,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -4028,6 +4829,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -4050,6 +4853,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -4072,6 +4880,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -4094,6 +4904,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -4116,6 +4928,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -4138,6 +4954,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -4159,6 +4977,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -4181,6 +5001,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -4203,6 +5028,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -4225,6 +5055,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4246,6 +5078,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4267,6 +5103,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4288,6 +5128,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139122"
   },
@@ -4307,6 +5152,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4328,6 +5178,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139120"
   },
@@ -4347,6 +5199,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4368,6 +5222,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4389,6 +5245,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139117"
   },
@@ -4408,6 +5266,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139116"
   },
@@ -4427,6 +5287,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139115"
   },
@@ -4446,6 +5311,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4467,6 +5337,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4488,6 +5363,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -4509,6 +5389,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4530,6 +5416,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4551,6 +5441,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139109"
   },
@@ -4570,6 +5465,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139106"
   },
@@ -4589,6 +5490,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4610,6 +5513,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4631,6 +5536,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "博士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4652,6 +5559,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4673,6 +5584,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -4695,6 +5611,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -4716,6 +5636,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4737,6 +5663,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4758,6 +5689,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4779,6 +5715,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4800,6 +5738,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -4821,6 +5765,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4842,6 +5788,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4863,6 +5811,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4884,6 +5834,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -4905,6 +5857,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139083"
   },
@@ -4924,6 +5882,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139082"
   },
@@ -4943,6 +5907,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139081"
   },
@@ -4962,6 +5932,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139080"
   },
@@ -4981,6 +5957,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5002,6 +5984,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5023,6 +6009,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5044,6 +6034,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5065,6 +6061,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5086,6 +6088,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139074"
   },
@@ -5105,6 +6113,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5126,6 +6140,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5147,6 +6166,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计"
+   ],
    "tags": [
     "ai"
    ],
@@ -5168,6 +6191,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -5189,6 +6218,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5210,6 +6245,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5231,6 +6271,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139060"
   },
@@ -5250,6 +6296,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139059"
   },
@@ -5269,6 +6320,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5290,6 +6345,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5311,6 +6370,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5332,6 +6395,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5353,6 +6420,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5374,6 +6448,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -5395,6 +6475,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5416,6 +6500,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -5437,6 +6527,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -5458,6 +6554,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5479,6 +6579,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科"
+   ],
    "tags": [
     "ai"
    ],
@@ -5500,6 +6604,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5521,6 +6630,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5542,6 +6656,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -5564,6 +6682,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -5585,6 +6708,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -5606,6 +6734,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -5628,6 +6761,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5649,6 +6788,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5670,6 +6815,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5691,6 +6841,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5712,6 +6868,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5733,6 +6894,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5754,6 +6921,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5775,6 +6948,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -5796,6 +6971,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5817,6 +6998,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139029"
   },
@@ -5836,6 +7022,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139028"
   },
@@ -5856,6 +7044,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -5878,6 +7072,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5899,6 +7097,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5920,6 +7122,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5942,6 +7148,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -5963,6 +7174,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -5984,6 +7201,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6006,6 +7227,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6028,6 +7255,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6050,6 +7283,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6072,6 +7311,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139016"
   },
@@ -6092,6 +7337,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139015"
   },
@@ -6112,6 +7363,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6134,6 +7391,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6155,6 +7417,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "博士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6176,6 +7444,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6197,6 +7471,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6220,6 +7499,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074692139008"
   },
@@ -6241,6 +7522,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -6264,6 +7547,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -6285,6 +7570,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944860"
   },
@@ -6304,6 +7591,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6325,6 +7616,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6347,6 +7643,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6368,6 +7668,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6389,6 +7693,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6410,6 +7719,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6431,6 +7744,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -6452,6 +7767,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6473,6 +7793,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -6494,6 +7820,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6515,6 +7847,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -6536,6 +7870,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6557,6 +7896,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6578,6 +7921,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -6599,6 +7944,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6620,6 +7969,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -6641,6 +7992,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6662,6 +8017,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6683,6 +8042,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944838"
   },
@@ -6702,6 +8063,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6723,6 +8088,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944835"
   },
@@ -6742,6 +8112,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6763,6 +8138,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944833"
   },
@@ -6782,6 +8162,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6803,6 +8188,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6824,6 +8214,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6845,6 +8240,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944829"
   },
@@ -6864,6 +8265,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944828"
   },
@@ -6885,6 +8291,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944827"
   },
@@ -6904,6 +8315,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6925,6 +8343,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6946,6 +8371,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6967,6 +8397,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -6988,6 +8423,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944822"
   },
@@ -7007,6 +8448,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944821"
   },
@@ -7026,6 +8473,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7047,6 +8498,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944818"
   },
@@ -7066,6 +8521,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944817"
   },
@@ -7085,6 +8544,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944816"
   },
@@ -7104,6 +8568,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7125,6 +8593,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "博士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944814"
   },
@@ -7144,6 +8618,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944811"
   },
@@ -7163,6 +8641,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944810"
   },
@@ -7182,6 +8664,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944807"
   },
@@ -7201,6 +8687,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7222,6 +8712,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944805"
   },
@@ -7241,6 +8736,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -7262,6 +8762,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -7283,6 +8788,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信"
+   ],
    "tags": [
     "ai"
    ],
@@ -7304,6 +8815,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7325,6 +8840,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944798"
   },
@@ -7344,6 +8863,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7365,6 +8888,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7387,6 +8916,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7409,6 +8944,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7431,6 +8972,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7453,6 +9000,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7475,6 +9028,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7497,6 +9056,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7519,6 +9084,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -7541,6 +9112,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7562,6 +9139,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7583,6 +9166,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -7604,6 +9189,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -7625,6 +9212,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7646,6 +9238,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944781"
   },
@@ -7665,6 +9262,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944780"
   },
@@ -7684,6 +9283,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944779"
   },
@@ -7703,6 +9304,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7724,6 +9331,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -7746,6 +9355,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -7768,6 +9379,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7790,6 +9406,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7812,6 +9433,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7834,6 +9460,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7856,6 +9487,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7877,6 +9513,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944769"
   },
@@ -7896,6 +9537,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944768"
   },
@@ -7915,6 +9561,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7936,6 +9587,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7957,6 +9613,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7978,6 +9639,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -7999,6 +9665,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8020,6 +9690,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8041,6 +9715,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -8062,6 +9738,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8083,6 +9764,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8104,6 +9790,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8125,6 +9816,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8146,6 +9842,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8167,6 +9867,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8188,6 +9893,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "人文 / 社科",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944753"
   },
@@ -8207,6 +9918,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944752"
   },
@@ -8226,6 +9943,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -8248,6 +9971,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8269,6 +9996,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -8291,6 +10025,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8312,6 +10050,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8333,6 +10077,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8354,6 +10104,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8375,6 +10129,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8396,6 +10154,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -8418,6 +10181,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8439,6 +10207,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8460,6 +10233,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8481,6 +10260,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8502,6 +10287,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8523,6 +10313,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8544,6 +10339,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8565,6 +10365,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8586,6 +10392,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8607,6 +10419,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8628,6 +10446,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8649,6 +10473,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8670,6 +10499,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8691,6 +10526,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8712,6 +10552,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8733,6 +10579,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8754,6 +10607,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8775,6 +10635,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8796,6 +10662,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8817,6 +10687,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -8838,6 +10710,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -8859,6 +10736,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "博士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -8881,6 +10764,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -8902,6 +10789,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -8924,6 +10815,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944712"
   },
@@ -8943,6 +10840,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -8964,6 +10863,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -8986,6 +10890,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944709"
   },
@@ -9006,6 +10912,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -9028,6 +10936,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1231829074687944707"
   },
@@ -9048,6 +10961,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -9070,6 +10985,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -9092,6 +11009,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -9115,6 +11034,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -9142,6 +11065,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -9166,6 +11093,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": "本科",
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "ai",
     "game"
@@ -9189,6 +11120,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9210,6 +11143,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1228857789737478144"
   },
@@ -9231,6 +11169,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "game"
    ],
@@ -9252,6 +11194,12 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "金融产品",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957068180006912"
   },
@@ -9271,6 +11219,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226908073827117056"
   },
@@ -9292,6 +11245,12 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "金融产品",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875900751390720"
   },
@@ -9317,6 +11276,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224696522596614144"
   },
@@ -9339,6 +11303,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224696469513274368"
   },
@@ -9360,6 +11329,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "项目管理",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224696276592067584"
   },
@@ -9380,6 +11351,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9401,6 +11374,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9430,6 +11405,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224696104600437761"
   },
@@ -9452,6 +11431,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224696103971292160"
   },
@@ -9475,6 +11458,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "game"
    ],
@@ -9499,6 +11486,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9523,6 +11512,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1218257148728045568"
   },
@@ -9548,6 +11542,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1218257147532668928"
   },
@@ -9567,6 +11563,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1215999629615951872"
   },
@@ -9594,6 +11595,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1212816229455368192"
   },
@@ -9614,6 +11617,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1212183855952704521"
   },
@@ -9641,6 +11646,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9672,6 +11679,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9700,6 +11709,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": "本科",
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9725,6 +11736,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "项目管理",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1153452731391100930"
   },
@@ -9747,6 +11760,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": null,
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9768,6 +11783,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -9789,6 +11808,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -9810,6 +11833,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -9831,6 +11858,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -9853,6 +11884,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -9874,6 +11909,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -9896,6 +11935,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9918,6 +11959,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9940,6 +11983,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9962,6 +12007,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -9983,6 +12030,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10004,6 +12053,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10027,6 +12080,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10048,6 +12105,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10071,6 +12133,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10094,6 +12160,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10117,6 +12188,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10144,6 +12217,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10167,6 +12245,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10191,6 +12271,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10212,6 +12296,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10234,6 +12322,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10259,6 +12352,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10283,6 +12380,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10306,6 +12405,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10329,6 +12430,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10353,6 +12456,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10377,6 +12482,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -10403,6 +12510,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10426,6 +12538,14 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1210646470286783490"
   },
@@ -10451,6 +12571,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10476,6 +12600,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10499,6 +12628,14 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1177660287764272128"
   },
@@ -10524,6 +12661,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10546,6 +12687,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": null,
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -10568,6 +12714,14 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [
     "game"
    ],
@@ -10589,6 +12743,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1243662428588616704"
   },
@@ -10609,6 +12767,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1234496944370743296"
   },
@@ -10629,6 +12789,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1228831632895911936"
   },
@@ -10650,6 +12812,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1227032278660950016"
   },
@@ -10671,6 +12837,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "市场营销",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1227032176378652672"
   },
@@ -10690,6 +12860,14 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [
     "game"
    ],
@@ -10711,6 +12889,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875890517316608"
   },
@@ -10730,6 +12910,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875888789263361"
   },
@@ -10749,6 +12931,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875888789263360"
   },
@@ -10770,6 +12954,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875884628486144"
   },
@@ -10792,6 +12978,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875738188556288"
   },
@@ -10813,6 +13001,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226875613710029824"
   },
@@ -10833,6 +13025,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "公共关系",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224788538126854144"
   },
@@ -10852,6 +13046,13 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224696587981619200"
   },
@@ -10876,6 +13077,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224067393358393344"
   },
@@ -10899,6 +13104,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "市场营销",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1224067387964684288"
   },
@@ -10922,6 +13131,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1200889496565214209"
   },
@@ -10941,6 +13152,11 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1155545119882220545"
   },
@@ -10960,6 +13176,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1155545119882220544"
   },
@@ -10987,6 +13205,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1153452731391100929"
   },
@@ -11009,6 +13231,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": null,
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=-5"
   },
@@ -11028,6 +13252,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1295854455115448320"
   },
@@ -11047,6 +13273,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1237050782143247360"
   },
@@ -11066,6 +13297,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957123234441217"
   },
@@ -11086,6 +13319,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957123234441216"
   },
@@ -11106,6 +13343,12 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957123230246912"
   },
@@ -11125,6 +13368,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957104464930818"
   },
@@ -11145,6 +13393,12 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957104464930817"
   },
@@ -11165,6 +13419,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957104464930816"
   },
@@ -11184,6 +13440,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957086077102083"
   },
@@ -11203,6 +13461,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957086077102082"
   },
@@ -11225,6 +13487,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957086077102081"
   },
@@ -11246,6 +13513,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957086077102080"
   },
@@ -11265,6 +13536,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "财经分析",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226671919517307904"
   },
@@ -11285,6 +13561,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "财经分析",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226671880397034496"
   },
@@ -11306,6 +13586,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226585684903864320"
   },
@@ -11329,6 +13614,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -11351,6 +13640,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -11373,6 +13664,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -11395,6 +13688,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -11416,6 +13711,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1165235572529633280"
   },
@@ -11441,6 +13740,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -11467,6 +13768,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": null,
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=-6"
   },
@@ -11488,6 +13791,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "技术运营",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1287398722585903105"
   },
@@ -11507,6 +13815,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信"
+   ],
    "tags": [
     "ai"
    ],
@@ -11530,6 +13843,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "技术运营",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1287398663932755968"
   },
@@ -11549,6 +13867,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -11570,6 +13890,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -11593,6 +13917,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "硬件开发",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284501739072168961"
   },
@@ -11613,6 +13939,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "硬件开发",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284501739072168960"
   },
@@ -11633,6 +13964,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "技术运营",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284501698043487233"
   },
@@ -11653,6 +13990,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284501698043487232"
   },
@@ -11677,6 +14019,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "技术运营",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [
     "game"
    ],
@@ -11699,6 +14047,13 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "技术运营",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317795630523392"
   },
@@ -11721,6 +14076,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "硬件开发",
+   "edu": null,
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317542697182211"
   },
@@ -11745,6 +14105,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "解决方案与服务",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317542697182209"
   },
@@ -11765,6 +14127,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "解决方案与服务",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317542697182208"
   },
@@ -11790,6 +14154,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -11814,6 +14184,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信"
+   ],
    "tags": [
     "ai"
    ],
@@ -11842,6 +14217,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "安全技术",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "ai",
     "game"
@@ -11870,6 +14249,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126531220382720"
   },
@@ -11895,6 +14279,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126524891177984"
   },
@@ -11922,6 +14311,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "测试与质量管理",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126512731890688"
   },
@@ -11947,6 +14340,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126506864059392"
   },
@@ -11973,6 +14370,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126501084308480"
   },
@@ -11999,6 +14400,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "安全技术",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -12026,6 +14431,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12055,6 +14466,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126460798018560"
   },
@@ -12082,6 +14495,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -12111,6 +14529,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282707439695012865"
   },
@@ -12136,6 +14558,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -12161,6 +14587,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -12191,6 +14622,13 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [
     "ai",
     "game"
@@ -12221,6 +14659,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -12251,6 +14695,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -12278,6 +14728,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12309,6 +14765,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -12338,6 +14796,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -12368,6 +14828,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -12399,6 +14861,8 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -12429,6 +14893,12 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "算法研究",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -12457,6 +14927,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -12489,6 +14963,11 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -12513,6 +14992,10 @@
    "familyId": "2",
    "family": "技术",
    "subFamily": "软件开发",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -12536,6 +15019,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12558,6 +15046,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1313264719775357952"
   },
@@ -12578,6 +15070,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12600,6 +15097,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12624,6 +15126,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12648,6 +15155,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12672,6 +15184,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1309860393552117761"
   },
@@ -12694,6 +15208,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1309860393552117760"
   },
@@ -12713,6 +15232,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1307853584876142592"
   },
@@ -12732,6 +15257,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1307853575103414272"
   },
@@ -12752,6 +15284,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -12774,6 +15308,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -12795,6 +15331,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -12817,6 +15359,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12840,6 +15387,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12861,6 +15413,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12884,6 +15441,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -12905,6 +15464,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -12928,6 +15489,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -12949,6 +15512,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -12970,6 +15537,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1292723595709365265"
   },
@@ -12989,6 +15560,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13011,6 +15586,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1292723595709365260"
   },
@@ -13031,6 +15611,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1292723595709365258"
   },
@@ -13051,6 +15635,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1292723595709365257"
   },
@@ -13071,6 +15660,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13093,6 +15686,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13117,6 +15714,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -13139,6 +15738,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13162,6 +15767,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13184,6 +15794,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13205,6 +15820,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -13228,6 +15845,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1292597531922250753"
   },
@@ -13247,6 +15869,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "博士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -13271,6 +15895,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1292597521964973057"
   },
@@ -13293,6 +15923,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13316,6 +15952,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1291815835345992706"
   },
@@ -13336,6 +15978,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13357,6 +16005,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13378,6 +16030,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13401,6 +16058,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13424,6 +16086,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1291815825879448581"
   },
@@ -13445,6 +16112,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -13468,6 +16141,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1291815825879448578"
   },
@@ -13489,6 +16167,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13512,6 +16195,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13536,6 +16224,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13560,6 +16253,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -13582,6 +16277,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -13604,6 +16303,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -13627,6 +16330,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -13648,6 +16353,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -13670,6 +16381,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -13692,6 +16405,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -13714,6 +16429,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -13736,6 +16453,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -13757,6 +16479,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13780,6 +16507,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13802,6 +16533,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -13823,6 +16560,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13845,6 +16589,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13866,6 +16614,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "博士",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284497026289312768"
   },
@@ -13886,6 +16636,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -13909,6 +16661,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -13931,6 +16685,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13952,6 +16710,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -13973,6 +16735,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "本科",
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "ai"
    ],
@@ -13994,6 +16760,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -14015,6 +16786,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282064466091287552"
   },
@@ -14034,6 +16809,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -14055,6 +16835,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -14076,6 +16861,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -14097,6 +16888,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -14118,6 +16914,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -14139,6 +16939,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计"
+   ],
    "tags": [
     "ai"
    ],
@@ -14160,6 +16964,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -14181,6 +16991,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14203,6 +17020,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14225,6 +17046,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -14246,6 +17069,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14268,6 +17093,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14293,6 +17124,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14318,6 +17151,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14340,6 +17175,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14365,6 +17204,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14387,6 +17231,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14409,6 +17260,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -14431,6 +17286,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -14455,6 +17312,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14477,6 +17336,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -14498,6 +17359,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14520,6 +17385,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -14544,6 +17413,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14569,6 +17440,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14591,6 +17464,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "博士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14613,6 +17488,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14635,6 +17512,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14660,6 +17539,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14685,6 +17566,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14709,6 +17592,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14733,6 +17620,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -14756,6 +17647,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14778,6 +17675,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14800,6 +17702,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14822,6 +17728,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14844,6 +17755,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14868,6 +17783,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -14891,6 +17810,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14915,6 +17836,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -14938,6 +17861,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -14960,6 +17885,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -14982,6 +17911,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15004,6 +17938,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15027,6 +17966,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai",
     "game"
@@ -15049,6 +17990,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15071,6 +18017,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15092,6 +18043,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15113,6 +18070,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -15134,6 +18093,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -15155,6 +18120,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15176,6 +18147,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -15197,6 +18170,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -15218,6 +18193,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15239,6 +18219,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15261,6 +18248,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -15282,6 +18276,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15303,6 +18302,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15324,6 +18328,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15345,6 +18354,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15366,6 +18380,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15387,6 +18405,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15408,6 +18431,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15429,6 +18457,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15450,6 +18482,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15471,6 +18507,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15492,6 +18533,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15513,6 +18559,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1277774706287944714"
   },
@@ -15532,6 +18583,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1277774706287944713"
   },
@@ -15551,6 +18607,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15573,6 +18635,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -15594,6 +18658,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15615,6 +18684,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15636,6 +18710,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -15657,6 +18738,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15678,6 +18763,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -15699,6 +18791,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -15720,6 +18814,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1277774706283750400"
   },
@@ -15739,6 +18839,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15761,6 +18867,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15783,6 +18895,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15804,6 +18921,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15826,6 +18949,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15847,6 +18975,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15868,6 +19000,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -15889,6 +19026,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -15911,6 +19053,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15932,6 +19080,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15953,6 +19105,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 数据 / 数据工程",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -15974,6 +19131,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -15995,6 +19154,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16016,6 +19180,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -16037,6 +19203,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16058,6 +19228,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -16079,6 +19251,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16100,6 +19276,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16121,6 +19303,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500844"
   },
@@ -16140,6 +19327,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500843"
   },
@@ -16159,6 +19351,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500842"
   },
@@ -16178,6 +19375,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16199,6 +19402,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -16221,6 +19430,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "game"
    ],
@@ -16242,6 +19457,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16263,6 +19484,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科"
+   ],
    "tags": [
     "ai"
    ],
@@ -16284,6 +19509,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16305,6 +19535,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -16327,6 +19561,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -16348,6 +19587,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -16369,6 +19613,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -16391,6 +19640,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16412,6 +19667,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16433,6 +19693,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16454,6 +19720,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16475,6 +19747,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16496,6 +19774,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "博士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -16517,6 +19797,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16538,6 +19824,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500744"
   },
@@ -16557,6 +19848,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500743"
   },
@@ -16576,6 +19869,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -16597,6 +19896,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16618,6 +19921,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "博士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16639,6 +19946,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16660,6 +19973,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16681,6 +20000,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500733"
   },
@@ -16700,6 +20025,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500732"
   },
@@ -16719,6 +20050,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16740,6 +20077,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16761,6 +20103,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "博士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16782,6 +20130,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "本科",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16803,6 +20157,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16824,6 +20183,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500726"
   },
@@ -16843,6 +20204,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -16864,6 +20227,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -16885,6 +20250,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500722"
   },
@@ -16904,6 +20271,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16925,6 +20296,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16946,6 +20322,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -16967,6 +20347,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500708"
   },
@@ -16986,6 +20371,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17007,6 +20397,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500706"
   },
@@ -17026,6 +20421,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17047,6 +20447,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500703"
   },
@@ -17066,6 +20472,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500702"
   },
@@ -17085,6 +20496,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500701"
   },
@@ -17104,6 +20520,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17125,6 +20548,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17146,6 +20576,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17167,6 +20602,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17188,6 +20628,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500696"
   },
@@ -17207,6 +20653,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500695"
   },
@@ -17226,6 +20678,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -17248,6 +20706,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "大语言模型 / NLP",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -17270,6 +20734,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -17292,6 +20762,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17313,6 +20789,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17334,6 +20816,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500666"
   },
@@ -17353,6 +20837,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500665"
   },
@@ -17372,6 +20858,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17393,6 +20884,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17414,6 +20910,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17435,6 +20936,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17456,6 +20962,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17477,6 +20988,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 基础设施 / 系统与安全",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17498,6 +21014,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17519,6 +21040,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17540,6 +21066,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17561,6 +21092,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17582,6 +21118,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "AI 其他方向",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17603,6 +21143,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -17625,6 +21170,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17646,6 +21196,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17667,6 +21222,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -17688,6 +21249,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -17709,6 +21276,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17730,6 +21302,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17751,6 +21328,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17772,6 +21354,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17793,6 +21381,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17814,6 +21408,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17835,6 +21435,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17856,6 +21462,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17877,6 +21488,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -17898,6 +21515,11 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17919,6 +21541,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -17940,6 +21568,13 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai"
    ],
@@ -17961,6 +21596,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -17983,6 +21622,12 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "多模态 / 视觉 / 语音",
+   "edu": "硕士",
+   "majors": [
+    "数理 / 统计",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500612"
   },
@@ -18002,6 +21647,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -18023,6 +21670,10 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai"
    ],
@@ -18044,6 +21695,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "智能体 / 强化学习",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -18065,6 +21718,8 @@
    "familyId": "7",
    "family": "AI 研究",
    "subFamily": "搜索 / 推荐 / 模型应用",
+   "edu": "硕士",
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -18086,6 +21741,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": "本科",
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "ai",
     "game"
@@ -18111,6 +21770,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284592104206836736"
   },
@@ -18134,6 +21798,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317600528245760"
   },
@@ -18154,6 +21822,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18179,6 +21849,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126495480718336"
   },
@@ -18206,6 +21878,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [
     "ai",
     "game"
@@ -18233,6 +21909,11 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "内容制作",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126452350690304"
   },
@@ -18260,6 +21941,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282707379615819777"
   },
@@ -18286,6 +21969,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "项目管理",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282707379615819776"
   },
@@ -18315,6 +22000,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "通用产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18338,6 +22025,10 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [
     "game"
    ],
@@ -18363,6 +22054,8 @@
    "familyId": "3",
    "family": "产品",
    "subFamily": "游戏产品",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18384,6 +22077,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18406,6 +22103,14 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "计算机 / 软件",
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [
     "game"
    ],
@@ -18427,6 +22132,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -18451,6 +22160,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18475,6 +22188,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18498,6 +22215,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "ai",
     "game"
@@ -18520,6 +22242,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18542,6 +22268,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18563,6 +22294,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18590,6 +22325,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18612,6 +22352,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18635,6 +22377,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18658,6 +22402,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18684,6 +22430,10 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18708,6 +22458,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18730,6 +22482,11 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "平面交互",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件",
+    "设计 / 艺术"
+   ],
    "tags": [
     "game"
    ],
@@ -18753,6 +22510,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18776,6 +22535,8 @@
    "familyId": "4",
    "family": "设计",
    "subFamily": "游戏美术",
+   "edu": null,
+   "majors": [],
    "tags": [
     "game"
    ],
@@ -18797,6 +22558,13 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "人文 / 社科",
+    "数理 / 统计",
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284318005643518976"
   },
@@ -18816,6 +22584,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317968595231744"
   },
@@ -18847,6 +22617,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317542697182210"
   },
@@ -18866,6 +22640,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284207539936109568"
   },
@@ -18887,6 +22663,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284207373170582528"
   },
@@ -18906,6 +22686,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126495480718337"
   },
@@ -18929,6 +22713,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283126469811577856"
   },
@@ -18950,6 +22736,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "公共关系",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282707442895266816"
   },
@@ -18975,6 +22763,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282707381767480320"
   },
@@ -19000,6 +22792,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "销售拓展",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282707380882482176"
   },
@@ -19025,6 +22819,10 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "市场营销",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1282707375417304064"
   },
@@ -19044,6 +22842,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1277366755316311040"
   },
@@ -19063,6 +22863,8 @@
    "familyId": "5",
    "family": "市场",
    "subFamily": "战略投资",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1277366754477467648"
   },
@@ -19082,6 +22884,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1315812653754702848"
   },
@@ -19102,6 +22908,12 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1292833382451231744"
   },
@@ -19121,6 +22933,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -19146,6 +22960,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -19168,6 +22984,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [],
    "tags": [
     "ai"
    ],
@@ -19193,6 +23011,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "人力资源",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [
     "ai"
    ],
@@ -19214,6 +23036,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "财经分析",
+   "edu": null,
+   "majors": [
+    "数理 / 统计",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284632941590553600"
   },
@@ -19235,6 +23062,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "财经分析",
+   "edu": null,
+   "majors": [
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284632498743321600"
   },
@@ -19255,6 +23086,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284528300198503425"
   },
@@ -19276,6 +23112,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284528300198503424"
   },
@@ -19295,6 +23136,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284512614105555971"
   },
@@ -19314,6 +23159,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": null,
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284512614105555970"
   },
@@ -19333,6 +23180,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "不限"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284512614105555969"
   },
@@ -19353,6 +23204,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": null,
+   "majors": [
+    "不限"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284512614105555968"
   },
@@ -19373,6 +23228,12 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "人文 / 社科",
+    "电子 / 通信",
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284512614101361666"
   },
@@ -19395,6 +23256,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [
+    "计算机 / 软件"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284512614101361665"
   },
@@ -19416,6 +23281,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "法律与公共策略",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284512614101361664"
   },
@@ -19437,6 +23304,11 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术",
+    "金融 / 商科"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317795626329088"
   },
@@ -19456,6 +23328,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1284317763288245248"
   },
@@ -19475,6 +23349,10 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [
+    "设计 / 艺术"
+   ],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1283045533715604480"
   },
@@ -19502,6 +23380,8 @@
    "familyId": "6",
    "family": "职能",
    "subFamily": "行政支持",
+   "edu": "本科",
+   "majors": [],
    "tags": [
     "game"
    ],
