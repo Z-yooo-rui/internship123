@@ -2,8 +2,9 @@ name: 抓取岗位数据
 
 on:
   schedule:
-    # 每 2 小时整点运行（UTC 时间，与北京时间无关，因为是间隔）
-    - cron: '0 */2 * * *'
+    # 错峰运行：避开整点（GitHub 整点负载最高会丢弃调度）
+    # 每 2 小时的 23 分，UTC。北京时间对应 08:23 / 10:23 / 12:23 ...
+    - cron: '23 */2 * * *'
   workflow_dispatch:
 
 permissions:
