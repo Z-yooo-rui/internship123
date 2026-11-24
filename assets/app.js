@@ -30,10 +30,9 @@ let cityExpanded = false;
 
 const el = {
   time: document.getElementById('topbar-time'),
-  statTotal: document.getElementById('stat-total'),
-  statAi: document.getElementById('stat-ai'),
-  statTech: document.getElementById('stat-tech'),
-  statIntern: document.getElementById('stat-intern'),
+  subTotal: document.getElementById('sub-total'),
+  subIntern: document.getElementById('sub-intern'),
+  quick: document.getElementById('hero-quick'),
   groups: document.getElementById('filter-groups'),
   sidebar: document.getElementById('sidebar'),
   mask: document.getElementById('sidebar-mask'),
@@ -88,21 +87,6 @@ function saveFavs() {
   } catch {
     /* 隐私模式忽略 */
   }
-}
-
-function countUp(node, target, duration = 650) {
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || target < 10) {
-    node.textContent = String(target);
-    return;
-  }
-  const start = performance.now();
-  const step = (now) => {
-    const p = Math.min(1, (now - start) / duration);
-    node.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
-    if (p < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
 }
 
 function countMap(items, pick) {
@@ -164,13 +148,44 @@ async function load() {
 
 function renderMeta() {
   const time = meta.fetched_at_display || '未知';
-  countUp(el.statTotal, meta.kept_count ?? allJobs.length);
-  countUp(el.statAi, meta.families?.find((f) => f.name === 'AI 研究')?.count ?? 0);
-  countUp(el.statTech, meta.families?.find((f) => f.name === '技术')?.count ?? 0);
-  countUp(el.statIntern, meta.intern_count ?? 0);
+  el.subTotal.textContent = String(meta.kept_count ?? allJobs.length);
+  el.subIntern.textContent = String(meta.intern_count ?? 0);
 
   const stale = isStale(meta.fetched_at);
   el.time.textContent = stale ? '更新于 ' + time + '（可能不是最新）' : '更新于 ' + time;
+  renderQuick();
+}
+
+/* 职能快捷入口：数字即入口，点一下等于在筛选栏勾上 */
+
+function renderQuick() {
+  if (!el.quick) return;
+  const fams = sortByOrder(
+    (meta.families || []).map((f) => ({ id: f.name, count: f.count })),
+    FAMILY_ORDER
+  );
+
+  el.quick.replaceChildren(
+    ...fams.map((f) => {
+      const on = state.families.has(f.id);
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'quick' + (on ? ' is-on' : '');
+      b.setAttribute('aria-pressed', String(on));
+      b.appendChild(span(f.id, 'quick-name'));
+      b.appendChild(span(String(f.count), 'quick-n'));
+      b.addEventListener('click', () => {
+        if (state.families.has(f.id)) state.families.delete(f.id);
+        else state.families.add(f.id);
+        pruneSubFamilies();
+        renderFilters();
+        render();
+        const layout = document.querySelector('.layout');
+        if (layout) layout.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      return b;
+    })
+  );
 }
 
 function isStale(iso) {
@@ -234,13 +249,7 @@ function renderFilters() {
     makeGroup('职能', null, famItems, state.families, (id) => {
       if (state.families.has(id)) state.families.delete(id);
       else state.families.add(id);
-      // 移除不再属于已选一级的二级选项
-      const valid = new Set(
-        allJobs.filter((j) => state.families.has(j.family)).map((j) => j.subFamily)
-      );
-      for (const sub of [...state.subFamilies]) {
-        if (!valid.has(sub)) state.subFamilies.delete(sub);
-      }
+      pruneSubFamilies();
       renderFilters();
       render();
     })
@@ -352,11 +361,22 @@ function renderFilters() {
   el.groups.replaceChildren(...groups);
   renderActiveBar();
   renderFilterCount();
+  renderQuick();
 }
 
 function toggle(set, id) {
   if (set.has(id)) set.delete(id);
   else set.add(id);
+}
+
+/** 一级职能变化后，清掉已不属于任何已选一级的二级选项 */
+function pruneSubFamilies() {
+  const valid = new Set(
+    allJobs.filter((j) => state.families.has(j.family)).map((j) => j.subFamily)
+  );
+  for (const sub of [...state.subFamilies]) {
+    if (!valid.has(sub)) state.subFamilies.delete(sub);
+  }
 }
 
 /* ---------- 已选条件 ---------- */

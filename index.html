@@ -7,7 +7,7 @@
 <meta name="description" content="腾讯校招岗位聚合，覆盖技术、产品、设计、市场、职能与 AI 研究六大方向，支持职能、城市、事业群多维筛选，每 2 小时自动更新。">
 <meta name="theme-color" content="#FAFAFA">
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./assets/style.css?v=20261124d">
+<link rel="stylesheet" href="./assets/style.css?v=20261124f">
 </head>
 <body>
 
@@ -27,28 +27,11 @@
 
 <section class="hero">
   <div class="shell">
-    <p class="hero-eyebrow">腾讯校园招聘 · 数据来自官网</p>
+    <p class="hero-eyebrow">腾讯校园招聘 · 每 2 小时同步</p>
     <h1 class="hero-title">腾讯的岗位，<br>按职能筛到底</h1>
-    <p class="hero-sub">技术、产品、设计、市场、职能、AI 研究六大方向，AI 研究再往下拆七个技术领域。不用再猜「这个岗到底做什么」。</p>
+    <p class="hero-sub">六个职类、<strong id="sub-total">—</strong> 个在招岗位（含 <strong id="sub-intern">—</strong> 个实习）。<br class="hero-br">点下面的方向直接开筛，不用再猜「这个岗到底做什么」。</p>
 
-    <div class="stats">
-      <div class="stat">
-        <span class="stat-num" id="stat-total">—</span>
-        <span class="stat-label">在招岗位</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" id="stat-ai">—</span>
-        <span class="stat-label">AI 研究</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" id="stat-tech">—</span>
-        <span class="stat-label">技术</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" id="stat-intern">—</span>
-        <span class="stat-label">实习</span>
-      </div>
-    </div>
+    <div class="hero-quick" id="hero-quick" aria-label="按职能快速筛选"></div>
   </div>
 </section>
 
@@ -138,6 +121,6 @@
   </div>
 </footer>
 
-<script type="module" src="./assets/app.js?v=20261124d"></script>
+<script type="module" src="./assets/app.js?v=20261124f"></script>
 </body>
 </html>
