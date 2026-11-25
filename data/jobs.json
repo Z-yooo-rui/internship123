@@ -1,7 +1,7 @@
 {
  "meta": {
-  "fetched_at": "2026-11-24T20:07:04+08:00",
-  "fetched_at_display": "2026-11-24 20:07",
+  "fetched_at": "2026-11-25T18:23:23+08:00",
+  "fetched_at_display": "2026-11-25 18:23",
   "source_total": 882,
   "source_count": 882,
   "kept_count": 882,
@@ -13,7 +13,7 @@
   "dropped_count": 0,
   "merged_duplicates": 0,
   "detail_cache_total": 882,
-  "detail_fetched": 882,
+  "detail_fetched": 0,
   "detail_failed": 0,
   "subfamily_coverage": 0.994,
   "edu_coverage": 0.686,
@@ -229,11 +229,11 @@
    },
    {
     "name": "上海",
-    "count": 257
+    "count": 256
    },
    {
     "name": "广州",
-    "count": 146
+    "count": 145
    },
    {
     "name": "成都",
@@ -241,7 +241,7 @@
    },
    {
     "name": "杭州",
-    "count": 55
+    "count": 54
    },
    {
     "name": "中国香港",
@@ -303,7 +303,7 @@
    },
    {
     "name": "WXG",
-    "count": 203
+    "count": 202
    },
    {
     "name": "PCG",
@@ -11639,7 +11639,6 @@
    "cities": [
     "深圳总部",
     "北京",
-    "上海",
     "广州"
    ],
    "fid": 94,
@@ -11696,14 +11695,12 @@
     "CDG",
     "CSIG",
     "IEG",
-    "TEG",
-    "WXG"
+    "TEG"
    ],
    "cities": [
     "深圳总部",
     "北京",
-    "上海",
-    "广州"
+    "上海"
    ],
    "fid": 94,
    "familyId": "3",
@@ -11952,8 +11949,7 @@
     "IEG"
    ],
    "cities": [
-    "深圳总部",
-    "杭州"
+    "深圳总部"
    ],
    "fid": 85,
    "familyId": "4",
@@ -17474,7 +17470,7 @@
   },
   {
    "id": "1279259071920579585",
-   "title": "光子AI-Omni 模态实时可控游戏视频生成训练及推理infra研究",
+   "title": "光子 AI-Omni 模态生成式游戏可交互渲染训推infra研究",
    "project": "青云计划-应届生",
    "label": "应届毕业生 青云计划",
    "type": "campus",
