@@ -1,27 +1,27 @@
 {
  "meta": {
-  "fetched_at": "2026-11-25T18:23:23+08:00",
-  "fetched_at_display": "2026-11-25 18:23",
-  "source_total": 882,
-  "source_count": 882,
-  "kept_count": 882,
-  "intern_count": 517,
-  "campus_count": 365,
+  "fetched_at": "2026-11-26T11:02:06+08:00",
+  "fetched_at_display": "2026-11-26 11:02",
+  "source_total": 880,
+  "source_count": 880,
+  "kept_count": 880,
+  "intern_count": 516,
+  "campus_count": 364,
   "ai_count": 542,
-  "game_count": 261,
+  "game_count": 260,
   "both_count": 152,
   "dropped_count": 0,
   "merged_duplicates": 0,
-  "detail_cache_total": 882,
-  "detail_fetched": 0,
+  "detail_cache_total": 883,
+  "detail_fetched": 1,
   "detail_failed": 0,
   "subfamily_coverage": 0.994,
-  "edu_coverage": 0.686,
-  "major_coverage": 0.762,
+  "edu_coverage": 0.684,
+  "major_coverage": 0.761,
   "families": [
    {
     "name": "AI 研究",
-    "count": 604
+    "count": 603
    },
    {
     "name": "技术",
@@ -33,7 +33,7 @@
    },
    {
     "name": "职能",
-    "count": 43
+    "count": 42
    },
    {
     "name": "产品",
@@ -59,7 +59,7 @@
    },
    {
     "name": "AI 基础设施 / 系统与安全",
-    "count": 84
+    "count": 83
    },
    {
     "name": "搜索 / 推荐 / 模型应用",
@@ -98,12 +98,12 @@
     "count": 15
    },
    {
-    "name": "行政支持",
+    "name": "法律与公共策略",
     "count": 15
    },
    {
-    "name": "法律与公共策略",
-    "count": 15
+    "name": "行政支持",
+    "count": 14
    },
    {
     "name": "销售拓展",
@@ -169,29 +169,29 @@
    },
    {
     "name": "本科",
-    "count": 97
+    "count": 96
    },
    {
     "name": "硕士",
-    "count": 469
+    "count": 468
    },
    {
     "name": "博士",
-    "count": 38
+    "count": 37
    }
   ],
   "majors": [
    {
     "name": "计算机 / 软件",
-    "count": 584
+    "count": 582
    },
    {
     "name": "电子 / 通信",
-    "count": 269
+    "count": 268
    },
    {
     "name": "数理 / 统计",
-    "count": 244
+    "count": 243
    },
    {
     "name": "设计 / 艺术",
@@ -212,20 +212,20 @@
   ],
   "projects": {
    "青云计划-实习生": 349,
-   "青云计划-应届生": 260,
+   "青云计划-应届生": 259,
    "应届毕业生": 105,
-   "应届实习": 95,
+   "应届实习": 94,
    "日常实习": 68,
    "项目实习生": 5
   },
   "cities": [
    {
     "name": "深圳总部",
-    "count": 581
+    "count": 579
    },
    {
     "name": "北京",
-    "count": 415
+    "count": 414
    },
    {
     "name": "上海",
@@ -233,7 +233,7 @@
    },
    {
     "name": "广州",
-    "count": 145
+    "count": 146
    },
    {
     "name": "成都",
@@ -291,7 +291,7 @@
   "bgs": [
    {
     "name": "TEG",
-    "count": 294
+    "count": 293
    },
    {
     "name": "IEG",
@@ -299,7 +299,7 @@
    },
    {
     "name": "CSIG",
-    "count": 230
+    "count": 229
    },
    {
     "name": "WXG",
@@ -311,7 +311,7 @@
    },
    {
     "name": "CDG",
-    "count": 104
+    "count": 103
    },
    {
     "name": "S1",
@@ -1210,7 +1210,6 @@
    ],
    "cities": [
     "深圳总部",
-    "北京",
     "上海",
     "广州"
    ],
@@ -12198,7 +12197,6 @@
    "label": "应届实习",
    "type": "intern",
    "bgs": [
-    "CDG",
     "CSIG",
     "IEG",
     "PCG",
@@ -13419,27 +13417,6 @@
    "majors": [],
    "tags": [],
    "url": "https://join.qq.com/post_detail.html?postid=1226957104464930816"
-  },
-  {
-   "id": "1226957086077102083",
-   "title": "文化交流与接待管理",
-   "project": "应届实习",
-   "label": "应届实习",
-   "type": "intern",
-   "bgs": [
-    "CSIG"
-   ],
-   "cities": [
-    "深圳总部"
-   ],
-   "fid": 329,
-   "familyId": "6",
-   "family": "职能",
-   "subFamily": "行政支持",
-   "edu": "本科",
-   "majors": [],
-   "tags": [],
-   "url": "https://join.qq.com/post_detail.html?postid=1226957086077102083"
   },
   {
    "id": "1226957086077102082",
@@ -14996,6 +14973,30 @@
     "game"
    ],
    "url": "https://join.qq.com/post_detail.html?postid=1282032034373805056"
+  },
+  {
+   "id": "1323269414631726080",
+   "title": "微信小微-全双工语音交互大模型研究",
+   "project": "青云计划-应届生",
+   "label": "应届毕业生 青云计划",
+   "type": "campus",
+   "bgs": [
+    "WXG"
+   ],
+   "cities": [
+    "北京",
+    "广州"
+   ],
+   "fid": 752,
+   "familyId": "7",
+   "family": "AI 研究",
+   "subFamily": "多模态 / 视觉 / 语音",
+   "edu": null,
+   "majors": [],
+   "tags": [
+    "ai"
+   ],
+   "url": "https://join.qq.com/post_detail.html?postid=1323269414631726080"
   },
   {
    "id": "1313264749181623296",
@@ -17470,7 +17471,7 @@
   },
   {
    "id": "1279259071920579585",
-   "title": "光子 AI-Omni 模态生成式游戏可交互渲染训推infra研究",
+   "title": "光子AI-Omni 模态生成式游戏可交互渲染训推infra研究",
    "project": "青云计划-应届生",
    "label": "应届毕业生 青云计划",
    "type": "campus",
@@ -17494,7 +17495,7 @@
   },
   {
    "id": "1279259071920579584",
-   "title": "光子AI-Omni 模态实时可控游戏视频生成研究",
+   "title": "光子AI-Omni 模态生成式游戏可交互渲染研究",
    "project": "青云计划-应届生",
    "label": "应届毕业生 青云计划",
    "type": "campus",
@@ -18956,31 +18957,6 @@
    "url": "https://join.qq.com/post_detail.html?postid=1277774706262778883"
   },
   {
-   "id": "1277774706262778882",
-   "title": "Agent赋能安全攻防演练",
-   "project": "青云计划-应届生",
-   "label": "应届毕业生 青云计划",
-   "type": "campus",
-   "bgs": [
-    "TEG"
-   ],
-   "cities": [
-    "深圳总部"
-   ],
-   "fid": 755,
-   "familyId": "7",
-   "family": "AI 研究",
-   "subFamily": "AI 基础设施 / 系统与安全",
-   "edu": "博士",
-   "majors": [
-    "计算机 / 软件"
-   ],
-   "tags": [
-    "ai"
-   ],
-   "url": "https://join.qq.com/post_detail.html?postid=1277774706262778882"
-  },
-  {
    "id": "1277774706262778881",
    "title": "端到端生成式AI视频处理",
    "project": "青云计划-应届生",
@@ -19409,33 +19385,6 @@
     "game"
    ],
    "url": "https://join.qq.com/post_detail.html?postid=1274481034578500840"
-  },
-  {
-   "id": "1274481034578500839",
-   "title": "微信小微-支持方言的音频理解模型",
-   "project": "青云计划-应届生",
-   "label": "应届毕业生 青云计划",
-   "type": "campus",
-   "bgs": [
-    "WXG"
-   ],
-   "cities": [
-    "北京"
-   ],
-   "fid": 752,
-   "familyId": "7",
-   "family": "AI 研究",
-   "subFamily": "多模态 / 视觉 / 语音",
-   "edu": "硕士",
-   "majors": [
-    "数理 / 统计",
-    "电子 / 通信",
-    "计算机 / 软件"
-   ],
-   "tags": [
-    "game"
-   ],
-   "url": "https://join.qq.com/post_detail.html?postid=1274481034578500839"
   },
   {
    "id": "1274481034578500837",
